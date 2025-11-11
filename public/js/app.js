@@ -1,10 +1,45 @@
 document.addEventListener('DOMContentLoaded', function () {
-    function toggleMenu() {
-        const navLinks = document.getElementById('navLinks');
-        navLinks.classList.toggle('active');
-    }
+    const menuToggle = document.getElementById('menuToggle');
+    const navLinks = document.getElementById('navLinks');
+    const navOverlay = document.getElementById('navOverlay');
 
-// Close menu when clicking outside
+    // Add event listeners
+    menuToggle.addEventListener('click', toggleMenu);
+    navOverlay.addEventListener('click', toggleMenu);
+
+// Close menu when clicking on a link (for mobile)
+    document.querySelectorAll('.nav-links a, .mobile-cta-button').forEach(link => {
+        link.addEventListener('click', () => {
+            if (window.innerWidth <= 968) {
+                toggleMenu();
+            }
+        });
+    });
+
+// Close menu on window resize if it goes beyond mobile breakpoint
+    window.addEventListener('resize', () => {
+        if (window.innerWidth > 968) {
+            // Remove active classes
+            navLinks.classList.remove('active');
+            menuToggle.classList.remove('active');
+            navOverlay.classList.remove('active');
+
+            // Reset body overflow
+            document.body.style.overflow = '';
+
+            // Update aria-expanded attribute
+            menuToggle.setAttribute('aria-expanded', 'false');
+        }
+    });
+
+// Close menu with Escape key
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && navLinks.classList.contains('active')) {
+            toggleMenu();
+        }
+    });
+
+    // Close menu when clicking outside
     document.addEventListener('click', function (event) {
         const nav = document.querySelector('nav');
         const navLinks = document.getElementById('navLinks');
@@ -177,3 +212,20 @@ document.addEventListener('DOMContentLoaded', function () {
         if (isAutoPlaying) startAutoPlay();
     });
 });
+
+// Toggle menu function
+function toggleMenu() {
+    const isActive = navLinks.classList.contains('active');
+
+    // Toggle active classes
+    navLinks.classList.toggle('active');
+    menuToggle.classList.toggle('active');
+    navOverlay.classList.toggle('active');
+
+    // Prevent body scroll when menu is open
+    document.body.style.overflow = isActive ? '' : 'hidden';
+
+    // Update aria-expanded attribute for accessibility
+    menuToggle.setAttribute('aria-expanded', !isActive);
+}
+
