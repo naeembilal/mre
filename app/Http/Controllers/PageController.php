@@ -11,9 +11,9 @@ class PageController extends Controller
         return view('pages.home');
     }
 
-    public function about()
+    public function ourStory()
     {
-        return view('pages.about');
+        return view('pages.our-story');
     }
 
     public function careers()

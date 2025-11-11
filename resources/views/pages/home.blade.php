@@ -275,7 +275,7 @@
 
                 <!-- CTA Button -->
                 <div class="fms-cta-wrapper">
-                    <a href="#learn-more" class="fms-learn-btn">
+                    <a href="/our-story" class="fms-learn-btn">
                         <span class="fms-btn-text">Learn More</span>
                     </a>
                 </div>
