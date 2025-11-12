@@ -10,9 +10,21 @@
     </button>
 
     <ul class="nav-links" id="navLinks">
-        <li><a href="/our-story">Our Story</a></li>
-        <li><a href="/careers">Careers</a></li>
-        <li><a href="/contact">Contact</a></li>
+        <li>
+            <a class="{{request()->route()->getName() === 'our-story' ? 'active' : ''}}" href="/our-story">
+                Our Story
+            </a>
+        </li>
+        <li>
+            <a class="{{request()->route()->getName() === 'careers' ? 'active' : ''}}" href="/careers">
+                Careers
+            </a>
+        </li>
+        <li>
+            <a class="{{request()->route()->getName() === 'contact' ? 'active' : ''}}" href="/contact">
+                Contact
+            </a>
+        </li>
         <li><a href="#" class="cta-button mobile-cta-button">Go To FMS</a></li>
     </ul>
 
