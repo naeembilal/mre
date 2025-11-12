@@ -46,15 +46,11 @@
             </defs>
         </svg>
         <div class="services-container">
-            <div class="services-intro-wrapper">
-                <div class="intro-decorative-line-top"></div>
-                <div class="services-intro">
-                    <p class="intro-text">
-                        Look No Further Than MRE, The GCC-Based Operational And Management Consultancy
-                        That's Leading The Charge In The New Era Of Manpower And Tech-Powered Solutions.
-                    </p>
-                </div>
-                <div class="intro-decorative-line-bottom"></div>
+            <div class="services-intro">
+                <p class="intro-text">
+                    Look No Further Than MRE, The GCC-Based Operational And Management Consultancy
+                    That's Leading The Charge In The New Era Of Manpower And Tech-Powered Solutions.
+                </p>
             </div>
 
             <div class="services-content">
@@ -97,157 +93,101 @@
                         wide range of challenges.</p>
                 </div>
 
-                <!-- Right Content - Service Cards Carousel -->
-                <div>
-                    <div class="carousel-container">
-                        <div class="carousel-wrapper" id="carouselWrapper">
-                            <!-- Card 1: Business Consultancy -->
-                            <div class="key-service-card">
-                                <div>
-                                    <div class="card-icon">
-                                        <div class="icon-chart">
-                                            <div class="bar"></div>
-                                            <div class="bar"></div>
-                                            <div class="bar"></div>
-                                            <div class="bar"></div>
-                                            <div class="bar"></div>
-                                        </div>
-                                    </div>
-                                    <div class="card-content">
-                                        <h3>Business Consultancy</h3>
-                                        <p>Strategy, structure, process optimization</p>
-                                    </div>
-                                </div>
-                                <a href="#" class="learn-more">
-                                    Learn More
-                                    <span class="underline"></span>
-                                </a>
+                <div class="carousel-container">
+                    <div class="carousel-wrapper" id="carouselWrapper">
+                        <!-- Card 1: Business Consultancy -->
+                        <div class="key-service-card">
+                            <div class="card-icon">
+                                <img src="{{asset('images/icon-chart.png')}}">
                             </div>
+                            <div class="card-content">
+                                <h3>Business Consultancy</h3>
+                                <p>Strategy, structure, process optimization</p>
+                            </div>
+                            <a href="#" class="learn-more">
+                                Learn More
+                                <span class="underline"></span>
+                            </a>
+                        </div>
 
-                            <!-- Card 2: Operations Management -->
-                            <div class="key-service-card alt-border">
-                                <div>
-                                    <div class="card-icon">
-                                        <div class="icon-gear">
-                                            <svg viewBox="0 0 51 51" fill="none">
-                                                <circle cx="25.5" cy="25.5" r="8" fill="#626F66"/>
-                                                <path
-                                                    d="M25.5 0L29 8L37 8L40 16L48 20L48 31L40 35L37 43L29 43L25.5 51L22 43L14 43L11 35L3 31L3 20L11 16L14 8L22 8L25.5 0Z"
-                                                    stroke="#626F66" stroke-width="2"/>
-                                            </svg>
-                                        </div>
-                                    </div>
-                                    <div class="card-content">
-                                        <h3>Operations management</h3>
-                                        <p>Workflow, Fleet resource planning, Regional coverage, industries.</p>
-                                    </div>
-                                </div>
-                                <a href="#" class="learn-more">
-                                    Learn More
-                                    <span class="underline"></span>
-                                </a>
+                        <!-- Card 2: Operations Management -->
+                        <div class="key-service-card alt-border">
+                            <div class="card-icon">
+                                <img src="{{asset('images/icon-gear.png')}}">
                             </div>
+                            <div class="card-content">
+                                <h3>Operations management</h3>
+                                <p>Workflow, Fleet resource planning, Regional coverage, industries.</p>
+                            </div>
+                            <a href="#" class="learn-more">
+                                Learn More
+                                <span class="underline"></span>
+                            </a>
+                        </div>
 
-                            <!-- Card 3: HR & Talent Solutions -->
-                            <div class="key-service-card alt-border">
-                                <div>
-                                    <div class="card-icon">
-                                        <div class="icon-people">
-                                            <svg viewBox="0 0 51 51" fill="none">
-                                                <circle cx="15" cy="12" r="6" fill="#626F66"/>
-                                                <circle cx="36" cy="12" r="6" fill="#626F66"/>
-                                                <path d="M6 42C6 33 11 28 15 28C19 28 24 33 24 42" stroke="#626F66"
-                                                      stroke-width="3" fill="none"/>
-                                                <path d="M27 42C27 33 32 28 36 28C40 28 45 33 45 42" stroke="#626F66"
-                                                      stroke-width="3" fill="none"/>
-                                            </svg>
-                                        </div>
-                                    </div>
-                                    <div class="card-content">
-                                        <h3>HR & Talent Solutions</h3>
-                                        <p>Recruitment, Onboarding & Offboarding.</p>
-                                    </div>
-                                </div>
-                                <a href="#" class="learn-more">
-                                    Learn More
-                                    <span class="underline"></span>
-                                </a>
+                        <!-- Card 3: HR & Talent Solutions -->
+                        <div class="key-service-card alt-border">
+                            <div class="card-icon">
+                                <img src="{{asset('images/icon-people.png')}}">
                             </div>
+                            <div class="card-content">
+                                <h3>HR & Talent Solutions</h3>
+                                <p>Recruitment, Onboarding & Offboarding.</p>
+                            </div>
+                            <a href="#" class="learn-more">
+                                Learn More
+                                <span class="underline"></span>
+                            </a>
+                        </div>
 
-                            <!-- Card 4: Project Management -->
-                            <div class="key-service-card alt-border">
-                                <div>
-                                    <div class="card-icon">
-                                        <div class="icon-project">
-                                            <div class="box"></div>
-                                            <div class="rect"></div>
-                                            <div class="long-rect"></div>
-                                            <div class="circle"></div>
-                                        </div>
-                                    </div>
-                                    <div class="card-content">
-                                        <h3>Project Management</h3>
-                                        <p>Logistics, transportation, Planning, execution.</p>
-                                    </div>
-                                </div>
-                                <a href="#" class="learn-more">
-                                    Learn More
-                                    <span class="underline"></span>
-                                </a>
+                        <!-- Card 4: Project Management -->
+                        <div class="key-service-card alt-border">
+                            <div class="card-icon">
+                                <img src="{{asset('images/icon-project.png')}}">
                             </div>
+                            <div class="card-content">
+                                <h3>Project Management</h3>
+                                <p>Logistics, transportation, Planning, execution.</p>
+                            </div>
+                            <a href="#" class="learn-more">
+                                Learn More
+                                <span class="underline"></span>
+                            </a>
+                        </div>
 
-                            <!-- Card 5: Automation -->
-                            <div class="key-service-card alt-border">
-                                <div>
-                                    <div class="card-icon">
-                                        <div class="icon-automation">
-                                            <svg viewBox="0 0 51 51" fill="none">
-                                                <line x1="8" y1="10" x2="20" y2="22" stroke="#626F66" stroke-width="3"/>
-                                                <line x1="20" y1="22" x2="32" y2="10" stroke="#626F66"
-                                                      stroke-width="3"/>
-                                                <line x1="8" y1="30" x2="43" y2="30" stroke="#626F66" stroke-width="3"/>
-                                                <line x1="8" y1="41" x2="43" y2="41" stroke="#626F66" stroke-width="3"/>
-                                                <circle cx="38" cy="10" r="4" fill="#626F66"/>
-                                                <circle cx="28" cy="30" r="3" fill="#626F66"/>
-                                                <circle cx="18" cy="41" r="3" fill="#626F66"/>
-                                            </svg>
-                                        </div>
-                                    </div>
-                                    <div class="card-content">
-                                        <h3>Automation</h3>
-                                        <p>FMS System</p>
-                                    </div>
+                        <!-- Card 5: Automation -->
+                        <div class="key-service-card alt-border">
+                            <div class="card-icon">
+                                <div class="icon-automation">
+                                    <svg viewBox="0 0 51 51" fill="none">
+                                        <line x1="8" y1="10" x2="20" y2="22" stroke="#626F66" stroke-width="3"/>
+                                        <line x1="20" y1="22" x2="32" y2="10" stroke="#626F66"
+                                              stroke-width="3"/>
+                                        <line x1="8" y1="30" x2="43" y2="30" stroke="#626F66" stroke-width="3"/>
+                                        <line x1="8" y1="41" x2="43" y2="41" stroke="#626F66" stroke-width="3"/>
+                                        <circle cx="38" cy="10" r="4" fill="#626F66"/>
+                                        <circle cx="28" cy="30" r="3" fill="#626F66"/>
+                                        <circle cx="18" cy="41" r="3" fill="#626F66"/>
+                                    </svg>
                                 </div>
-                                <a href="#" class="learn-more">
-                                    Learn More
-                                    <span class="underline"></span>
-                                </a>
                             </div>
+                            <div class="card-content">
+                                <h3>Automation</h3>
+                                <p>FMS System</p>
+                            </div>
+                            <a href="#" class="learn-more">
+                                Learn More
+                                <span class="underline"></span>
+                            </a>
                         </div>
                     </div>
-
-                    <!-- Carousel Controls -->
-                    <div class="carousel-controls">
-                        <button style="display: none" class="carousel-btn" id="prevBtn" onclick="moveCarousel(-1)">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
-                                <path d="M15 18L9 12L15 6" stroke-width="2" stroke-linecap="round"
-                                      stroke-linejoin="round"/>
-                            </svg>
-                        </button>
-
-                        <div class="carousel-dots" id="carouselDots"></div>
-
-                        <button style="display: none" class="carousel-btn" id="nextBtn" onclick="moveCarousel(1)">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
-                                <path d="M9 18L15 12L9 6" stroke-width="2" stroke-linecap="round"
-                                      stroke-linejoin="round"/>
-                            </svg>
-                        </button>
-                    </div>
                 </div>
+
+                <div id="carouselDots" class="carousel-dots"></div>
             </div>
         </div>
     </section>
+
     <section class="fms-discovery-wrapper">
         <!-- Background Decorations -->
         <div class="fms-decoration-left">

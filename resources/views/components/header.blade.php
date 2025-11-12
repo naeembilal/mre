@@ -1,5 +1,5 @@
 <nav>
-    <div class="logo">
+    <div class="logo header-logo">
         <a href="/"><img src="{{asset('images/logo.svg')}}"></a>
     </div>
 
