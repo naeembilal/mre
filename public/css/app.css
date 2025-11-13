@@ -1828,6 +1828,405 @@ nav {
     display: none;
 }
 
+.fade-in-section {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.fade-in-section.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Optional: Stagger animations for children elements */
+.fade-in-section.stagger-children > * {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.fade-in-section.visible.stagger-children > * {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Different delays for staggered children */
+.fade-in-section.visible.stagger-children > *:nth-child(1) { transition-delay: 0.1s; }
+.fade-in-section.visible.stagger-children > *:nth-child(2) { transition-delay: 0.2s; }
+.fade-in-section.visible.stagger-children > *:nth-child(3) { transition-delay: 0.3s; }
+.fade-in-section.visible.stagger-children > *:nth-child(4) { transition-delay: 0.4s; }
+.fade-in-section.visible.stagger-children > *:nth-child(5) { transition-delay: 0.5s; }
+
+/* Specific animations for different sections */
+.hero.visible .hero-content > *,
+.services-section.visible .services-content > *,
+.key-services-section.visible .left-content > * {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.hero.visible .hero-title { transition-delay: 0.2s; }
+.hero.visible .hero-description { transition-delay: 0.4s; }
+.hero.visible .stats { transition-delay: 0.6s; }
+
+.services-section.visible .services-title { transition-delay: 0.2s; }
+.services-section.visible .services-cards { transition-delay: 0.4s; }
+
+.key-services-section.visible .main-heading { transition-delay: 0.2s; }
+.key-services-section.visible .description { transition-delay: 0.4s; }
+
+/* When section becomes visible, animate children */
+.hero.visible .hero-content > *,
+.services-section.visible .services-content > *,
+.key-services-section.visible .left-content > * {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.story-hero-wrapper.visible .story-tagline {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+    transition-delay: 0.2s;
+}
+
+.story-hero-wrapper.visible .story-main-heading {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+    transition-delay: 0.4s;
+}
+
+.story-hero-wrapper.visible .story-purpose-text {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+    transition-delay: 0.6s;
+}
+
+.story-hero-wrapper.visible .story-tagline,
+.story-hero-wrapper.visible .story-main-heading,
+.story-hero-wrapper.visible .story-purpose-text {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Animations for hero backdrop cards */
+.hero-backdrop-container.visible .bordered-info-box {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.hero-backdrop-container.visible .main-info-box { transition-delay: 0.2s; }
+.hero-backdrop-container.visible .mission-card-wrapper .bordered-info-box { transition-delay: 0.4s; }
+.hero-backdrop-container.visible .vision-card-wrapper .bordered-info-box { transition-delay: 0.6s; }
+.hero-backdrop-container.visible .values-card-wrapper .bordered-info-box { transition-delay: 0.8s; }
+
+.hero-backdrop-container.visible .bordered-info-box {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Animations for team section */
+.mre-team-section-wrapper.visible .primary-heading-text,
+.mre-team-section-wrapper.visible .descriptive-paragraph-text {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.mre-team-section-wrapper.visible .primary-heading-text {
+    transition-delay: 0.2s;
+}
+
+.mre-team-section-wrapper.visible .descriptive-paragraph-text {
+    transition-delay: 0.4s;
+}
+
+.mre-team-section-wrapper.visible .primary-heading-text,
+.mre-team-section-wrapper.visible .descriptive-paragraph-text {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Animations for testimonials */
+.testimonials-section-backdrop.visible .testimonial-card-group {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.testimonials-section-backdrop.visible .testimonial-card-group:nth-child(1) { transition-delay: 0.2s; }
+.testimonials-section-backdrop.visible .testimonial-card-group:nth-child(2) { transition-delay: 0.4s; }
+.testimonials-section-backdrop.visible .testimonial-card-group:nth-child(3) { transition-delay: 0.6s; }
+
+.testimonials-section-backdrop.visible .testimonial-card-group {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Animations for key services section */
+.our-story-key-services.visible .main-heading {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+    transition-delay: 0.2s;
+}
+
+.our-story-key-services.visible .key-service-card {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.our-story-key-services.visible .key-service-card:nth-child(1) { transition-delay: 0.3s; }
+.our-story-key-services.visible .key-service-card:nth-child(2) { transition-delay: 0.4s; }
+.our-story-key-services.visible .key-service-card:nth-child(3) { transition-delay: 0.5s; }
+.our-story-key-services.visible .key-service-card:nth-child(4) { transition-delay: 0.6s; }
+.our-story-key-services.visible .key-service-card:nth-child(5) { transition-delay: 0.7s; }
+
+.our-story-key-services.visible .main-heading,
+.our-story-key-services.visible .key-service-card {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.story-hero-wrapper.visible .story-tagline {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+    transition-delay: 0.2s;
+}
+
+.story-hero-wrapper.visible .story-main-heading {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+    transition-delay: 0.4s;
+}
+
+.story-hero-wrapper.visible .story-purpose-text {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+    transition-delay: 0.6s;
+}
+
+.story-hero-wrapper.visible .story-tagline,
+.story-hero-wrapper.visible .story-main-heading,
+.story-hero-wrapper.visible .story-purpose-text {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Animations for team section */
+.mre-team-section-wrapper.visible .primary-heading-text,
+.mre-team-section-wrapper.visible .descriptive-paragraph-text {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.mre-team-section-wrapper.visible .primary-heading-text {
+    transition-delay: 0.2s;
+}
+
+.mre-team-section-wrapper.visible .descriptive-paragraph-text {
+    transition-delay: 0.4s;
+}
+
+.mre-team-section-wrapper.visible .primary-heading-text,
+.mre-team-section-wrapper.visible .descriptive-paragraph-text {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Animations for testimonials */
+.testimonials-section-backdrop.visible .testimonial-card-group {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.testimonials-section-backdrop.visible .testimonial-card-group:nth-child(1) { transition-delay: 0.2s; }
+.testimonials-section-backdrop.visible .testimonial-card-group:nth-child(2) { transition-delay: 0.4s; }
+.testimonials-section-backdrop.visible .testimonial-card-group:nth-child(3) { transition-delay: 0.6s; }
+
+.testimonials-section-backdrop.visible .testimonial-card-group {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Animations for growth section */
+.growth-section.visible .growth-content > * {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.growth-section.visible .growth-title {
+    transition-delay: 0.2s;
+}
+
+.growth-section.visible .growth-description {
+    transition-delay: 0.4s;
+}
+
+.growth-section.visible .application-form-wrapper {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+    transition-delay: 0.6s;
+}
+
+.growth-section.visible .growth-content > *,
+.growth-section.visible .application-form-wrapper {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Form elements animation */
+.growth-section.visible .form-group {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.4s ease-out, transform 0.4s ease-out;
+}
+
+.growth-section.visible .form-group:nth-child(1) { transition-delay: 0.7s; }
+.growth-section.visible .form-group:nth-child(2) { transition-delay: 0.75s; }
+.growth-section.visible .form-group:nth-child(3) { transition-delay: 0.8s; }
+.growth-section.visible .form-group:nth-child(4) { transition-delay: 0.85s; }
+.growth-section.visible .form-group:nth-child(5) { transition-delay: 0.9s; }
+.growth-section.visible .form-group:nth-child(6) { transition-delay: 0.95s; }
+
+.growth-section.visible .form-group {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.growth-section.visible .submit-button {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.4s ease-out, transform 0.4s ease-out;
+    transition-delay: 1s;
+}
+
+.growth-section.visible .submit-button {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.story-hero-wrapper.visible .story-tagline {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+    transition-delay: 0.2s;
+}
+
+.story-hero-wrapper.visible .story-main-heading {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+    transition-delay: 0.4s;
+}
+
+.story-hero-wrapper.visible .story-purpose-text {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+    transition-delay: 0.6s;
+}
+
+.story-hero-wrapper.visible .story-tagline,
+.story-hero-wrapper.visible .story-main-heading,
+.story-hero-wrapper.visible .story-purpose-text {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Animations for contact section */
+.contact-wrapper.visible .contact-info-panel {
+    opacity: 0;
+    transform: translateX(-50px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+    transition-delay: 0.2s;
+}
+
+.contact-wrapper.visible .contact-form-wrapper {
+    opacity: 0;
+    transform: translateX(50px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+    transition-delay: 0.4s;
+}
+
+.contact-wrapper.visible .contact-info-panel,
+.contact-wrapper.visible .contact-form-wrapper {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+/* Staggered animation for contact info items */
+.contact-wrapper.visible .contact-info-text > * {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+}
+
+.contact-wrapper.visible .contact-phone-line:nth-child(1) { transition-delay: 0.6s; }
+.contact-wrapper.visible .contact-phone-line:nth-child(2) { transition-delay: 0.7s; }
+.contact-wrapper.visible .contact-email { transition-delay: 0.8s; }
+.contact-wrapper.visible .contact-hours { transition-delay: 0.9s; }
+.contact-wrapper.visible .contact-address { transition-delay: 1s; }
+
+.contact-wrapper.visible .contact-info-text > * {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Staggered animation for form elements */
+.contact-wrapper.visible .contact-form-group {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+}
+
+.contact-wrapper.visible .contact-form-group:nth-child(1) { transition-delay: 0.6s; }
+.contact-wrapper.visible .contact-form-group:nth-child(2) { transition-delay: 0.7s; }
+.contact-wrapper.visible .contact-form-group:nth-child(3) { transition-delay: 0.8s; }
+
+.contact-wrapper.visible .contact-form-group {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.contact-wrapper.visible .contact-submit-button {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+    transition-delay: 0.9s;
+}
+
+.contact-wrapper.visible .contact-submit-button {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Optional: Input focus animations */
+.contact-form-input:focus,
+.contact-form-textarea:focus {
+    transform: translateY(-2px);
+    transition: transform 0.3s ease-out;
+}
+
+/* Button hover animation */
+.contact-submit-button:hover {
+    transform: translateY(-2px);
+    transition: transform 0.3s ease-out;
+}
+
 @media screen and (max-width: 1600px) {
     .primary-heading-text {
         font-size: 85px;

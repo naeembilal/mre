@@ -2,7 +2,7 @@
 @section('title', 'Contact')
 
 @section('content')
-    <section class="story-hero-wrapper">
+    <section class="story-hero-wrapper fade-in-section">
         <div class="story-hero-container">
             <div class="story-content-wrapper">
                 <h2 class="story-tagline">Contact Us</h2>
@@ -14,7 +14,7 @@
         </div>
     </section>
 
-    <section class="contact-wrapper">
+    <section class="contact-wrapper fade-in-section">
         <div class="contact-container">
             <!-- Left Side - Contact Information -->
             <div class="contact-info-panel animate-slide-left">

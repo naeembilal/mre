@@ -2,7 +2,7 @@
 @section('title', 'Home')
 
 @section('content')
-    <section class="hero">
+    <section class="hero fade-in-section">
         <div class="hero-content">
             <h1 class="hero-title">Transform The Habit</h1>
             <p class="hero-description">
@@ -31,7 +31,7 @@
         </div>
     </section>
 
-    <section class="services-section">
+    <section class="services-section fade-in-section">
         <svg class="svg-element" viewBox="0 0 360 641" fill="none" xmlns="http://www.w3.org/2000/svg">
             <g clip-path="url(#clip0_2058_6370)">
                 <path
@@ -82,7 +82,7 @@
         </div>
     </section>
 
-    <section class="key-services-section">
+    <section class="key-services-section fade-in-section">
         <div class="key-services-container">
             <div class="content-wrapper">
                 <!-- Left Content -->
@@ -188,7 +188,7 @@
         </div>
     </section>
 
-    <section class="fms-discovery-wrapper">
+    <section class="fms-discovery-wrapper fade-in-section">
         <!-- Background Decorations -->
         <div class="fms-decoration-left">
             <img src="{{asset('images/Layer_1.png')}}">
@@ -223,7 +223,7 @@
         </div>
     </section>
 
-    <section class="fms-industries-wrapper">
+    <section class="fms-industries-wrapper fade-in-section">
         <div class="fms-industries-container">
             <h3>Industries<br>Served</h3>
         </div>

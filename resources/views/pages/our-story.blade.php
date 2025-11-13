@@ -2,7 +2,7 @@
 @section('title', 'Our Story')
 
 @section('content')
-    <section class="story-hero-wrapper">
+    <section class="story-hero-wrapper fade-in-section">
         <div class="story-hero-container">
             <div class="story-content-wrapper">
                 <h2 class="story-tagline">About Us</h2>
@@ -14,7 +14,7 @@
         </div>
     </section>
 
-    <section class="hero-backdrop-container">
+    <section class="hero-backdrop-container fade-in-section">
         <svg class="svg-element" viewBox="0 0 360 641" fill="none" xmlns="http://www.w3.org/2000/svg">
             <g clip-path="url(#clip0_2058_6370)">
                 <path
@@ -69,7 +69,7 @@
         </div>
     </section>
 
-    <section class="mre-team-section-wrapper">
+    <section class="mre-team-section-wrapper fade-in-section">
         <div class="content-card-group-wrapper">
             <div class="mre-team-heading-container">
                 <h1 class="primary-heading-text">
@@ -86,7 +86,7 @@
         </div>
     </section>
 
-    <section class="testimonials-section-backdrop">
+    <section class="testimonials-section-backdrop fade-in-section">
         <div class="testimonials-decoration">
             <img src="{{asset('images/Layer_6.png')}}">
         </div>
@@ -138,7 +138,7 @@
         </div>
     </section>
 
-    <section class="key-services-section our-story-key-services">
+    <section class="key-services-section our-story-key-services fade-in-section">
         <div class="key-services-container">
             <div class="content-wrapper">
                 <!-- Left Content -->

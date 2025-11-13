@@ -365,5 +365,23 @@ document.addEventListener('DOMContentLoaded', function () {
         // Update aria-expanded attribute for accessibility
         menuToggle.setAttribute('aria-expanded', !isActive);
     }
+
+    const fadeSections = document.querySelectorAll('.fade-in-section');
+
+    const fadeInObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('visible');
+                fadeInObserver.unobserve(entry.target);
+            }
+        });
+    }, {
+        threshold: 0.15,
+        rootMargin: '0px 0px -50px 0px'
+    });
+
+    fadeSections.forEach(section => {
+        fadeInObserver.observe(section);
+    });
 });
 

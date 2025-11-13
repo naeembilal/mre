@@ -2,7 +2,7 @@
 @section('title', 'Careers')
 
 @section('content')
-    <section class="story-hero-wrapper">
+    <section class="story-hero-wrapper fade-in-section">
         <div class="story-hero-container">
             <div class="story-content-wrapper">
                 <h2 class="story-tagline">Careers</h2>
@@ -97,7 +97,7 @@
         </div>
     </section>
 
-    <section class="mre-team-section-wrapper">
+    <section class="mre-team-section-wrapper fade-in-section">
         <div class="content-card-group-wrapper">
             <div class="mre-team-heading-container">
                 <h1 class="primary-heading-text">
@@ -114,7 +114,7 @@
         </div>
     </section>
 
-    <section class="testimonials-section-backdrop">
+    <section class="testimonials-section-backdrop fade-in-section">
         <div class="testimonials-decoration">
             <img src="{{asset('images/Layer_6.png')}}">
         </div>
@@ -166,7 +166,7 @@
         </div>
     </section>
 
-    <section class="growth-section">
+    <section class="growth-section fade-in-section">
         <div class="growth-container">
             <div class="growth-content">
                 <h2 class="growth-title">Grow With Purpose</h2>
