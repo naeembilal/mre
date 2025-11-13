@@ -320,10 +320,10 @@ document.addEventListener('DOMContentLoaded', function () {
         // Calculate card width based on cards per view and container width
         const cardWidth = (containerWidth - ((cardsPerView - 1) * gap)) / cardsPerView;
 
-        cards.forEach(card => {
+        /*cards.forEach(card => {
             card.style.flex = `0 0 ${cardWidth}px`;
             card.style.maxWidth = `${cardWidth}px`;
-        });
+        });*/
     }
 
 // Initialize when DOM is loaded

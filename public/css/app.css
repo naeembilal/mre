@@ -52,6 +52,8 @@ nav {
     gap: 6rem;
     list-style: none;
     align-items: center;
+    margin-left: auto;
+    margin-right: 0;
 }
 
 .nav-links a {
@@ -429,7 +431,7 @@ nav {
 }
 
 .key-service-card {
-    flex: 0 0 calc(50% - 15px); /* Default for desktop - 2 cards */
+    flex: 0 0 calc(50% - 15px);
     background: rgba(232, 223, 217, 0.5);
     border: 2px solid var(--secondary-green);
     border-radius: 12px;
@@ -438,13 +440,15 @@ nav {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    transition: all 0.3s ease;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
     flex-shrink: 0;
 }
 
 .key-service-card:hover {
-    transform: translateY(-5px);
+    flex: 0 0 calc(60% - 15px);
+    transform: translateY(-8px);
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+    border-color: var(--primary-blue);
 }
 
 .key-service-card.alt-border {
@@ -597,7 +601,7 @@ nav {
 }
 
 .learn-more:hover .underline {
-    width: 60px;
+    width: 80px;
 }
 
 .underline {
@@ -606,6 +610,25 @@ nav {
     background: var(--primary-blue);
     margin-left: 12px;
     transition: width 0.3s ease;
+}
+
+/* Scrollbar styling */
+.carousel-container::-webkit-scrollbar {
+    height: 8px;
+}
+
+.carousel-container::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 10px;
+}
+
+.carousel-container::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 10px;
+}
+
+.carousel-container::-webkit-scrollbar-thumb:hover {
+    background: #555;
 }
 
 /* Carousel Controls */
@@ -1949,7 +1972,6 @@ nav {
 @media (min-width: 1200px) {
     .content-wrapper {
         grid-template-columns: 4fr 8fr;
-        gap: 100px;
     }
 
     .carousel-dots {
