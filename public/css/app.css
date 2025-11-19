@@ -138,21 +138,10 @@ nav {
     min-height: calc(100vh - 120px);
     align-items: center;
     position: relative;
-    background: none;
-}
 
-.hero::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-image: url('/images/hero.png');
+    background-image: url('/images/home_hero.png');
     background-size: cover;
     background-position: center;
-    opacity: 0.29;
-    z-index: -1;
 }
 
 .hero-content {
@@ -583,9 +572,8 @@ nav {
 .card-content p {
     font-size: 24px;
     font-weight: 450;
-    line-height: 1.54;
+    line-height: 1.25;
     color: var(--primary-blue);
-    text-transform: capitalize;
     margin-bottom: 40px;
 }
 
@@ -1190,7 +1178,6 @@ nav {
     font-size: 28px;
     line-height: 154%;
     text-align: center;
-    text-transform: capitalize;
     color: var(--bg-cream);
     margin: 0;
 }
@@ -1286,7 +1273,6 @@ nav {
     font-size: 32px;
     line-height: 154%;
     text-align: center;
-    text-transform: capitalize;
     color: var(--primary-blue);
     margin: 0;
 }
@@ -1353,11 +1339,9 @@ nav {
 }
 
 .italic-quote-text {
-    font-style: italic;
     font-weight: 450;
     font-size: 24px;
     line-height: 154%;
-    text-transform: capitalize;
     color: var(--bg-cream);
     margin: 0;
 }
@@ -1368,7 +1352,6 @@ nav {
     font-size: 24px;
     line-height: 154%;
     text-align: right;
-    text-transform: capitalize;
     color: var(--bg-cream);
     margin: 0;
     padding-top: 20px;
@@ -1565,7 +1548,7 @@ nav {
 .growth-description {
     font-size: 1.2rem;
     font-weight: 450;
-    line-height: 2;
+    line-height: 1.5;
     color: var(--primary-blue);
 }
 

@@ -32,8 +32,9 @@
         <div class="info-card-wrapper">
             <div class="bordered-info-box main-info-box">
                 <p class="company-text-content">
-                    (Company Background) Lorem Ipsum Is Simply Dummy Text Of The Printing And Typesetting Industry.
-                    Lorem Ipsum Has Been The Industry's Standard Dummy Text Ever
+                    <b>Company Background:</b> MRE is the GCC's premier operational consultancy, specializing in tech-powered
+                    manpower solutions; we aim to be the preeminent platform pioneering seamless, intelligent, and
+                    scalable operations.
                 </p>
             </div>
         </div>
@@ -42,8 +43,8 @@
         <div class="mission-card-wrapper">
             <div class="bordered-info-box">
                 <p class="company-text-content">
-                    (Our Mission) Lorem Ipsum Is Simply Dummy Text Of The Printing And Typesetting Industry. Lorem Ipsum
-                    Has Been The Industry's Standard Dummy Text Ever
+                    <b>Our Mission:</b> To empower organizations with people-first AI and deep operational expertise to amplify
+                    productivity and unlock the full potential of their talent.
                 </p>
             </div>
         </div>
@@ -52,8 +53,8 @@
         <div class="vision-card-wrapper">
             <div class="bordered-info-box">
                 <p class="company-text-content">
-                    (Our Vision) Lorem Ipsum Is Simply Dummy Text Of The Printing And Typesetting Industry. Lorem Ipsum
-                    Has Been The Industry's Standard Dummy Text Ever
+                    <b>Our Vision:</b> We envision a future where businesses thrive through smart, secure, and fully automated
+                    solutions driven by a team as diverse as our global reach.
                 </p>
             </div>
         </div>
@@ -62,8 +63,8 @@
         <div class="values-card-wrapper">
             <div class="bordered-info-box">
                 <p class="company-text-content">
-                    (Our Values) Lorem Ipsum Is Simply Dummy Text Of The Printing And Typesetting Industry. Lorem Ipsum
-                    Has Been The Industry's Standard Dummy Text Ever
+                    <b>Core Values:</b> We are defined by Innovation and Operational Integrity, rooted in our Regional Expertise,
+                    and driven by Empowering Talent through a Results-Driven Partnership.
                 </p>
             </div>
         </div>
@@ -74,13 +75,15 @@
             <div class="mre-team-heading-container">
                 <h1 class="primary-heading-text">
                     A Word From<br>
-                    The MRE Team
+                    The CEO
                 </h1>
             </div>
             <div class="beige-bordered-card-container">
                 <p class="descriptive-paragraph-text">
-                    Lorem Ipsum Is Simply Dummy Text Of The Printing And Typesetting Industry. Lorem Ipsum Has Been The
-                    Industry's Standard Dummy Text Ever
+                    “In any growing company, there are growing pains. Those pains are partially sorted by putting in
+                    policies and procedures. Those pains are also potentially sorted by bringing in more people -
+                    overheads. The art isn’t to get the right people to implement the procedures. The art is to have a
+                    fully digitized system in place to solve for growing pains” <i>-Mohamed Alyaqoob, CEO & Founder</i>
                 </p>
             </div>
         </div>
@@ -97,11 +100,11 @@
                     <div class="testimonial-content-wrapper">
                         <div class="quote-text-block">
                             <p class="italic-quote-text">
-                                "Lorem Ipsum Is Simply Dummy Text Of The Printing And Typesetting Industry. Lorem Ipsum
-                                Has Been The Industry's Standard Dummy Text"
+                                “The implementation of <b>smart patrols</b> and <b>automated manager communication</b> immediately cut
+                                our incident response time, providing us with real-time control and compliance”
                             </p>
                         </div>
-                        <p class="client-attribution-text">-Client Name</p>
+                        <p class="client-attribution-text">-Security Solutions</p>
                     </div>
                 </div>
             </div>
@@ -112,11 +115,11 @@
                     <div class="testimonial-content-wrapper">
                         <div class="quote-text-block">
                             <p class="italic-quote-text">
-                                "Lorem Ipsum Is Simply Dummy Text Of The Printing And Typesetting Industry. Lorem Ipsum
-                                Has Been The Industry's Standard Dummy Text"
+                                “MRE's platform is a true <b>end-to-end solution</b>; their <b>dispatch generation</b> and <b>Fleet asset
+                                    management</b> delivered unparalleled operational visibility.”
                             </p>
                         </div>
-                        <p class="client-attribution-text">-Client Name</p>
+                        <p class="client-attribution-text">-Last Mile Logistics</p>
                     </div>
                 </div>
             </div>
@@ -127,11 +130,11 @@
                     <div class="testimonial-content-wrapper">
                         <div class="quote-text-block">
                             <p class="italic-quote-text">
-                                "Lorem Ipsum Is Simply Dummy Text Of The Printing And Typesetting Industry. Lorem Ipsum
-                                Has Been The Industry's Standard Dummy Text"
+                                “MRE’s deep <b>regional expertise</b> and <b>contract-based staffing enforcement</b> are indispensable
+                                to our compliant, scalable success across the GCC.”
                             </p>
                         </div>
-                        <p class="client-attribution-text">-Client Name</p>
+                        <p class="client-attribution-text">-Gulf Commercial Solutions</p>
                     </div>
                 </div>
             </div>
@@ -154,8 +157,11 @@
                                 <img src="{{asset('images/icon-chart.png')}}">
                             </div>
                             <div class="card-content">
-                                <h3>Business Consultancy</h3>
-                                <p>Strategy, structure, process optimization</p>
+                                <h3>We’ve Got Your Back</h3>
+                                <p>
+                                    From processes to execution, we handle it all.
+                                    <br><span style="display: block; margin-top: 10px">Empowering your team to focus on sustainable growth.</span>
+                                </p>
                             </div>
                             <a href="#" class="learn-more">
                                 Learn More
@@ -169,8 +175,11 @@
                                 <img src="{{asset('images/icon-gear.png')}}">
                             </div>
                             <div class="card-content">
-                                <h3>Operations management</h3>
-                                <p>Workflow, Fleet resource planning, Regional coverage, industries.</p>
+                                <h3>Talent Without Borders</h3>
+                                <p>
+                                    Connect with top professionals from diverse backgrounds.
+                                    <br><span style="display: block; margin-top: 10px">Building inclusive, skilled teams that drive innovation and opportunity.</span>
+                                </p>
                             </div>
                             <a href="#" class="learn-more">
                                 Learn More
@@ -184,8 +193,11 @@
                                 <img src="{{asset('images/icon-people.png')}}">
                             </div>
                             <div class="card-content">
-                                <h3>HR & Talent Solutions</h3>
-                                <p>Recruitment, Onboarding & Offboarding.</p>
+                                <h3>Automation Made Easy</h3>
+                                <p>
+                                    Turn manual work into seamless, automated operations.
+                                    <br><span style="display: block; margin-top: 10px">Boost efficiency while promoting responsible, technology-driven practices.</span>
+                                </p>
                             </div>
                             <a href="#" class="learn-more">
                                 Learn More
@@ -199,34 +211,12 @@
                                 <img src="{{asset('images/icon-project.png')}}">
                             </div>
                             <div class="card-content">
-                                <h3>Project Management</h3>
-                                <p>Logistics, transportation, Planning, execution.</p>
-                            </div>
-                            <a href="#" class="learn-more">
-                                Learn More
-                                <span class="underline"></span>
-                            </a>
-                        </div>
-
-                        <!-- Card 5: Automation -->
-                        <div class="key-service-card alt-border">
-                            <div class="card-icon">
-                                <div class="icon-automation">
-                                    <svg viewBox="0 0 51 51" fill="none">
-                                        <line x1="8" y1="10" x2="20" y2="22" stroke="#626F66" stroke-width="3"/>
-                                        <line x1="20" y1="22" x2="32" y2="10" stroke="#626F66"
-                                              stroke-width="3"/>
-                                        <line x1="8" y1="30" x2="43" y2="30" stroke="#626F66" stroke-width="3"/>
-                                        <line x1="8" y1="41" x2="43" y2="41" stroke="#626F66" stroke-width="3"/>
-                                        <circle cx="38" cy="10" r="4" fill="#626F66"/>
-                                        <circle cx="28" cy="30" r="3" fill="#626F66"/>
-                                        <circle cx="18" cy="41" r="3" fill="#626F66"/>
-                                    </svg>
-                                </div>
-                            </div>
-                            <div class="card-content">
-                                <h3>Automation</h3>
-                                <p>FMS System</p>
+                                <h3>SDGs & vision 2030</h3>
+                                <p>
+                                    Pioneers innovative solutions and smart infrastructure, shaping industries of tomorrow.
+                                    <br><span style="display: block; margin-top: 10px">We champion gender equality,
+                                        inclusive workplaces, and meaningful employment, driving sustainable economic growth.</span>
+                                </p>
                             </div>
                             <a href="#" class="learn-more">
                                 Learn More

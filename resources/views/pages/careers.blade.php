@@ -107,8 +107,9 @@
             </div>
             <div class="beige-bordered-card-container">
                 <p class="descriptive-paragraph-text">
-                    Lorem Ipsum Is Simply Dummy Text Of The Printing And Typesetting Industry. Lorem Ipsum Has Been The
-                    Industry's Standard Dummy Text Ever
+                    “Write your story with MRE, where talent meets opportunity. Join a diverse, innovative team shaping
+                    the future together. Grow, contribute, and make an impact every single day. Your next chapter starts
+                    here, let’s build it together.” <i>-Hsayna Benkhamsa, Chief of Staff</i>
                 </p>
             </div>
         </div>
@@ -125,11 +126,12 @@
                     <div class="testimonial-content-wrapper">
                         <div class="quote-text-block">
                             <p class="italic-quote-text">
-                                "Lorem Ipsum Is Simply Dummy Text Of The Printing And Typesetting Industry. Lorem Ipsum
-                                Has Been The Industry's Standard Dummy Text"
+                                "I thrive on being at the <b>forefront of operational change</b>. I build the cutting-edge,
+                                fully automated software that drives real success, and I have the support to constantly
+                                evolve my skills here."
                             </p>
                         </div>
-                        <p class="client-attribution-text">-Employee Name</p>
+                        <p class="client-attribution-text">-Miana Zecevic , Full Stack Developer</p>
                     </div>
                 </div>
             </div>
@@ -140,11 +142,12 @@
                     <div class="testimonial-content-wrapper">
                         <div class="quote-text-block">
                             <p class="italic-quote-text">
-                                "Lorem Ipsum Is Simply Dummy Text Of The Printing And Typesetting Industry. Lorem Ipsum
-                                Has Been The Industry's Standard Dummy Text"
+                                "The MRE culture is truly <b>diverse and highly supportive</b>. I appreciate the blend of
+                                people-first focus and technology, making complex staffing and HR challenges
+                                collaborative and highly rewarding."
                             </p>
                         </div>
-                        <p class="client-attribution-text">-Employee Name</p>
+                        <p class="client-attribution-text">-Felicity Anthony, Office Manager</p>
                     </div>
                 </div>
             </div>
@@ -155,11 +158,12 @@
                     <div class="testimonial-content-wrapper">
                         <div class="quote-text-block">
                             <p class="italic-quote-text">
-                                "Lorem Ipsum Is Simply Dummy Text Of The Printing And Typesetting Industry. Lorem Ipsum
-                                Has Been The Industry's Standard Dummy Text"
+                                "It's fulfilling to support a company committed to <b>financial excellence and operational
+                                    integrity</b>. I enjoy the secure, transparent, and growth-driven environment that allows us
+                                to make a significant impact."
                             </p>
                         </div>
-                        <p class="client-attribution-text">-Employee Name</p>
+                        <p class="client-attribution-text">-Haseeb Ahmad, Senior Accountant</p>
                     </div>
                 </div>
             </div>
