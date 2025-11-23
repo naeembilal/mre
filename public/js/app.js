@@ -69,8 +69,8 @@ document.addEventListener('DOMContentLoaded', function () {
 
 // Calculate cards per view based on screen size - 2 on desktop, 1 on mobile
     function getCardsPerView() {
-        const width = window.innerWidth;
-        if (width >= 768) return 2; // 2 cards on tablet and desktop
+        // const width = window.innerWidth;
+        // if (width >= 768) return 2; // 2 cards on tablet and desktop
         return 1; // 1 card on mobile
     }
 

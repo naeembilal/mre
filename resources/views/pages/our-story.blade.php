@@ -158,9 +158,10 @@
                             </div>
                             <div class="card-content">
                                 <h3>We’ve Got Your Back</h3>
-                                <p>
+                                <p class="hover-text">
                                     From processes to execution, we handle it all.
-                                    <br><span style="display: block; margin-top: 10px">Empowering your team to focus on sustainable growth.</span>
+                                    <br><br>
+                                    Empowering your team to focus on sustainable growth.
                                 </p>
                             </div>
                             <a href="#" class="learn-more">
@@ -176,9 +177,10 @@
                             </div>
                             <div class="card-content">
                                 <h3>Talent Without Borders</h3>
-                                <p>
+                                <p class="hover-text">
                                     Connect with top professionals from diverse backgrounds.
-                                    <br><span style="display: block; margin-top: 10px">Building inclusive, skilled teams that drive innovation and opportunity.</span>
+                                    <br><br>
+                                    Building inclusive, skilled teams that drive innovation and opportunity.
                                 </p>
                             </div>
                             <a href="#" class="learn-more">
@@ -194,9 +196,10 @@
                             </div>
                             <div class="card-content">
                                 <h3>Automation Made Easy</h3>
-                                <p>
+                                <p class="hover-text">
                                     Turn manual work into seamless, automated operations.
-                                    <br><span style="display: block; margin-top: 10px">Boost efficiency while promoting responsible, technology-driven practices.</span>
+                                    <br><br>
+                                    Boost efficiency while promoting responsible, technology-driven practices.
                                 </p>
                             </div>
                             <a href="#" class="learn-more">
@@ -212,10 +215,12 @@
                             </div>
                             <div class="card-content">
                                 <h3>SDGs & vision 2030</h3>
-                                <p>
-                                    Pioneers innovative solutions and smart infrastructure, shaping industries of tomorrow.
-                                    <br><span style="display: block; margin-top: 10px">We champion gender equality,
-                                        inclusive workplaces, and meaningful employment, driving sustainable economic growth.</span>
+                                <p class="hover-text">
+                                    Pioneers innovative solutions and smart infrastructure, shaping industries of
+                                    tomorrow.
+                                    <br><br>
+                                    We champion gender equality, inclusive workplaces, and meaningful employment,
+                                    driving sustainable economic growth.
                                 </p>
                             </div>
                             <a href="#" class="learn-more">

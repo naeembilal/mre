@@ -6,26 +6,27 @@
         <div class="hero-content">
             <h1 class="hero-title">Transform The Habit</h1>
             <p class="hero-description">
-                Reduce your stress, We'll use our tailor-made solutions, savvy-operations,
-                and proprietary tools to take over, manage, and streamline your operations.
+                At MRE, we turn manual work into smart, automated operations that boost efficiency and elevate people
+                management. Our solutions go beyond digitization, creating seamless workflows, empowering teams, and
+                driving sustainable growth aligned with the GCC’s Vision 2030.
             </p>
         </div>
 
         <div class="stats">
             <div class="stat-item">
-                <div class="stat-number">500+</div>
-                <div class="stat-label">Projects</div>
+                <div class="stat-number">90+</div>
+                <div class="stat-label">Clients</div>
             </div>
             <div class="stat-item">
-                <div class="stat-number">3K+</div>
+                <div class="stat-number">2K+</div>
                 <div class="stat-label">People Managed</div>
             </div>
             <div class="stat-item">
-                <div class="stat-number">15+</div>
+                <div class="stat-number">27+</div>
                 <div class="stat-label">Experts Nationalities</div>
             </div>
             <div class="stat-item">
-                <div class="stat-number">07</div>
+                <div class="stat-number">04</div>
                 <div class="stat-label">Regional Coverage</div>
             </div>
         </div>
@@ -48,8 +49,9 @@
         <div class="services-container">
             <div class="services-intro">
                 <p class="intro-text">
-                    Look No Further Than MRE, The GCC-Based Operational And Management Consultancy
-                    That's Leading The Charge In The New Era Of Manpower And Tech-Powered Solutions.
+                    Look no further than MRE, GCC's leading operational and management consultancy, pioneering the new
+                    era of tech-powered manpower solutions. MRE empowers your entire organization, from the front office
+                    to the front line.
                 </p>
             </div>
 
@@ -60,21 +62,22 @@
                     <div class="service-card">
                         <h3 class="service-title">Consulting</h3>
                         <p class="service-description">
-                            Helping You Lead The Way By Example And Through Meaningful Change.
+                            Helping you lead the way by example and through meaningful change.
                         </p>
                     </div>
 
                     <div class="service-card">
-                        <h3 class="service-title">Staffing</h3>
+                        <h3 class="service-title">Staffing & Operating</h3>
                         <p class="service-description">
-                            Helping You With Your Staffing Needs, Effectively And Efficiently.
+                            Helping you with your staffing needs, effectively and efficiently, keeping the many moving
+                            parts of your operations smooth.
                         </p>
                     </div>
 
                     <div class="service-card">
-                        <h3 class="service-title">Operating</h3>
+                        <h3 class="service-title">Automating</h3>
                         <p class="service-description">
-                            Helping You Keep The Many Moving Parts Of Your Operations Smooth.
+                            Helping you become more efficient, streamlined, magical, and modern.
                         </p>
                     </div>
                 </div>
@@ -88,9 +91,9 @@
                 <!-- Left Content -->
                 <div class="left-content">
                     <h2 class="main-heading">What can we take off your shoulders?</h2>
-                    <p class="description">Our team of experts possesses extensive industry experience from various
-                        sectors across the region, equipping us with the knowledge and skills to confidently address a
-                        wide range of challenges.</p>
+                    <p class="description">Fueled by extensive industry experience spanning the region's diverse sectors,
+                        our team possesses the precise knowledge and skills required to turn your complex challenges into
+                        confident successes.</p>
                 </div>
 
                 <div class="carousel-container">
@@ -101,8 +104,16 @@
                                 <img src="{{asset('images/icon-chart.png')}}">
                             </div>
                             <div class="card-content">
-                                <h3>Business Consultancy</h3>
-                                <p>Strategy, structure, process optimization</p>
+                                <h3>Business Consultancy: Strategy, Structure, Process Optimization</h3>
+                                <p class="hover-text">
+                                    We drive meaningful change by aligning your strategy, structure, and processes with
+                                    high-level organizational goals. We specialize in providing the data-driven insights
+                                    needed for continuous improvement and sustainable growth across your enterprise.
+                                    <br><br>
+                                    Our Results-Oriented Methodology uses deep data analysis to diagnose challenges and
+                                    deliver actionable, strategic recommendations. We facilitate smooth transformations
+                                    and significant efficiency improvements to achieve tangible growth.
+                                </p>
                             </div>
                             <a href="#" class="learn-more">
                                 Learn More
@@ -116,8 +127,17 @@
                                 <img src="{{asset('images/icon-gear.png')}}">
                             </div>
                             <div class="card-content">
-                                <h3>Operations management</h3>
-                                <p>Workflow, Fleet resource planning, Regional coverage, industries.</p>
+                                <h3>Operations Management: Workflow, Resource Planning, Regional Coverage</h3>
+                                <p class="hover-text">
+                                    We manage the entire operational lifecycle with full attendance, payroll, and HR
+                                    automation. This includes smart leave management, scheduling, deployment, and
+                                    contract-based staffing enforcement. Our platform delivers control through smart
+                                    patrols, Fleet asset management, and advanced reporting and analytics.
+                                    <br><br>
+                                    Operations are compliant and highly efficient, supported by automated worker and
+                                    manager communication (alerts/exceptions). We also manage approval workflows and
+                                    complex dispatch generation to deliver full efficiency end-to-end.
+                                </p>
                             </div>
                             <a href="#" class="learn-more">
                                 Learn More
@@ -131,8 +151,17 @@
                                 <img src="{{asset('images/icon-people.png')}}">
                             </div>
                             <div class="card-content">
-                                <h3>HR & Talent Solutions</h3>
-                                <p>Recruitment, Onboarding & Offboarding.</p>
+                                <h3>HR & Talent Solutions: Recruitment, Onboarding, Talent Lifecycle</h3>
+                                <p class="hover-text">
+                                    Smart Staffing, Seamless Success. We transform recruitment into a streamlined,
+                                    automated process from global talent sourcing to onboarding and post-hire support.
+                                    We manage temporary staff, direct hires, and specialized experts across various
+                                    roles.
+                                    <br><br>
+                                    With a diverse pool of 27+ nationalities, we deliver quality candidates who fit your
+                                    culture and drive results. We take care of all the people logistics so your team can
+                                    focus on achieving more and accelerating business growth.
+                                </p>
                             </div>
                             <a href="#" class="learn-more">
                                 Learn More
@@ -146,8 +175,16 @@
                                 <img src="{{asset('images/icon-project.png')}}">
                             </div>
                             <div class="card-content">
-                                <h3>Project Management</h3>
-                                <p>Logistics, transportation, Planning, execution.</p>
+                                <h3>Project Management: Planning, Execution, Technology Integration</h3>
+                                <p class="hover-text">
+                                    We deliver complex project portfolios using expert agile and project management
+                                    methodologies. Our focus is aligning business objectives with technology teams to
+                                    ensure effective, timely, and integrated delivery.
+                                    <br><br>
+                                    We leverage advanced technology and data analytics, combining business analysis and
+                                    expertise to streamline project delivery. Achieve faster, risk-managed delivery and
+                                    successfully execute complex technology roadmaps on time and within scope.
+                                </p>
                             </div>
                             <a href="#" class="learn-more">
                                 Learn More
@@ -172,8 +209,16 @@
                                 </div>
                             </div>
                             <div class="card-content">
-                                <h3>Automation</h3>
-                                <p>FMS System</p>
+                                <h3>Automation: Digital Systems, Paperless Processes, AI Integration</h3>
+                                <p class="hover-text">
+                                    MRE champions a secure, paperless, automated, and digital approach. We leverage
+                                    technology as a catalyst for significant operational improvement, maximizing speed
+                                    and minimizing human error through digital enablement.
+                                    <br><br>
+                                    We identify pain points and optimize processes through full automation and cloud
+                                    optimization. This includes process automation and end-to-end digital transformation,
+                                    ensuring optimized IT operations and the agility to scale your business.
+                                </p>
                             </div>
                             <a href="#" class="learn-more">
                                 Learn More
@@ -226,6 +271,62 @@
     <section class="fms-industries-wrapper fade-in-section">
         <div class="fms-industries-container">
             <h3>Industries<br>Served</h3>
+            <p>The different industries we hire for, including but not limited to these.</p>
+            <div class="testimonials-grid-container home">
+                <div class="testimonial-card-group">
+                    <div class="bordered-testimonial-box">
+                        Warehousing
+                    </div>
+                </div>
+
+                <div class="testimonial-card-group">
+                    <div class="bordered-testimonial-box">
+                        Administrative
+                    </div>
+                </div>
+
+                <div class="testimonial-card-group">
+                    <div class="bordered-testimonial-box">
+                        Construction
+                    </div>
+                </div>
+
+                <div class="testimonial-card-group">
+                    <div class="bordered-testimonial-box">
+                        Customer Service
+                    </div>
+                </div>
+
+                <div class="testimonial-card-group">
+                    <div class="bordered-testimonial-box">
+                        Food & Beverage
+                    </div>
+                </div>
+
+                <div class="testimonial-card-group">
+                    <div class="bordered-testimonial-box">
+                        Hospitality
+                    </div>
+                </div>
+
+                <div class="testimonial-card-group">
+                    <div class="bordered-testimonial-box">
+                        Security
+                    </div>
+                </div>
+
+                <div class="testimonial-card-group">
+                    <div class="bordered-testimonial-box">
+                        Entertainment
+                    </div>
+                </div>
+
+                <div class="testimonial-card-group">
+                    <div class="bordered-testimonial-box">
+                        Manufacturing
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
 @endsection

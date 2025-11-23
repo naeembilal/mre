@@ -243,8 +243,8 @@ nav {
     border: 2px solid rgba(247, 246, 242, 0.5);
     border-radius: 12px;
     position: relative;
-    height: 75%;
-    min-height: 570px;
+    /*height: 80%;*/
+    /*min-height: 250px;*/
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -286,7 +286,7 @@ nav {
     line-height: 1.54;
     color: var(--bg-cream);
     font-weight: 450;
-    text-transform: capitalize;
+    /*text-transform: capitalize;*/
 }
 
 .services-content {
@@ -338,7 +338,7 @@ nav {
     line-height: 1.54;
     color: var(--bg-cream);
     font-weight: 450;
-    text-transform: capitalize;
+    /*text-transform: capitalize;*/
 }
 
 .svg-element {
@@ -425,19 +425,32 @@ nav {
     border: 2px solid var(--secondary-green);
     border-radius: 12px;
     padding: 40px;
-    height: 531px;
+    min-height: auto;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
     flex-shrink: 0;
+    min-width: 350px;
+}
+
+.hover-text {
+    display: none;
 }
 
 .key-service-card:hover {
-    flex: 0 0 calc(60% - 15px);
+    flex: 0 0 calc(75% - 15px);
     transform: translateY(-8px);
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
     border-color: var(--primary-blue);
+}
+
+.key-service-card:hover .hover-text {
+    display: inline;
+}
+
+.key-service-card:hover .learn-more {
+    display: none;
 }
 
 .key-service-card.alt-border {
@@ -446,6 +459,7 @@ nav {
 
 .card-icon {
     height: 50px;
+    margin-bottom: 25px;
 }
 
 /* Business Consultancy Icon - Bar Chart */
@@ -729,6 +743,18 @@ nav {
     color: var(--white);
 }
 
+.testimonials-grid-container.home .bordered-testimonial-box {
+    height: auto;
+    min-height: auto;
+    border: 2px solid var(--secondary-green);
+    background-color: #E8DFD980;
+    font-weight: 400;
+    font-size: 30px;
+    color: var(--secondary-green);
+    padding: 20px;
+    text-align: center;
+}
+
 .fms-discovery-wrapper {
     position: relative;
     width: 100%;
@@ -875,7 +901,6 @@ nav {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    min-height: 600px;
 }
 
 .fms-industries-container {
@@ -887,6 +912,14 @@ nav {
     font-weight: 450;
     font-size: clamp(48px, 7vw, 75px);
     line-height: 1;
+}
+
+.fms-industries-container p {
+    font-weight: 450;
+    font-size: 20px;
+    color: #243F5D;
+    margin-top: 10px;
+    margin-bottom: 40px;
 }
 
 .mre-footer-main {
@@ -2669,6 +2702,10 @@ nav {
         display: none;
     }
 
+    .services-title {
+        margin-top: 5%;
+    }
+
     .intro-decorative-line-top,
     .intro-decorative-line-bottom {
         display: none;
@@ -2971,8 +3008,12 @@ nav {
     }
 
     .services-intro {
-        padding-top: 20%;
-        padding-bottom: 20%;
+        /*padding-top: 20%;*/
+        /*padding-bottom: 20%;*/
+    }
+
+    .services-title {
+        margin-top: 15%;
     }
 
     .service-card {
@@ -3331,10 +3372,6 @@ nav {
 
 .mre-logo-block {
     fill: var(--primary-blue);
-}
-
-.key-service-card {
-    min-width: 280px;
 }
 
 @keyframes slideInLeft {
