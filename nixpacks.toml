@@ -25,15 +25,6 @@ cmds = [
 [start]
 cmd = "php artisan serve --host=0.0.0.0 --port=${PORT:-8000}"
 
-# Volume mounts for persistent data
-[[mounts]]
-from = "/root/mre/app/database"
-to = "/app/database"
-
-[[mounts]]
-from = "/root/mre/app/storage"
-to = "/app/storage"
-
 [variables]
 APP_ENV = "production"
 APP_DEBUG = "false"
