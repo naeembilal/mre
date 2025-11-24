@@ -15,7 +15,7 @@ cmds = [
     "mkdir -p /app/storage/framework/{cache,sessions,views}",
     "mkdir -p /app/storage/logs",
     "chmod -R 775 /app/storage /app/database",
-    "php artisan migrate --force",
+    "php artisan migrate --force --no-interaction || true",
     "php artisan storage:link",
     "php artisan config:cache",
     "php artisan route:cache",
