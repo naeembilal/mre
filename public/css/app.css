@@ -424,24 +424,24 @@ nav {
     transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
     flex-shrink: 0;
     min-width: 350px;
+    cursor: pointer;
 }
 
 .hover-text {
     display: none;
 }
 
-.key-service-card:hover {
+.key-service-card.active {
     flex: 0 0 calc(75% - 15px);
-    transform: translateY(-8px);
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
     border-color: var(--primary-blue);
 }
 
-.key-service-card:hover .hover-text {
+.key-service-card.active .hover-text {
     display: inline;
 }
 
-.key-service-card:hover .learn-more {
+.key-service-card.active .learn-more {
     display: none;
 }
 

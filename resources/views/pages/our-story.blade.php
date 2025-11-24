@@ -164,7 +164,7 @@
                                     Empowering your team to focus on sustainable growth.
                                 </p>
                             </div>
-                            <a href="#" class="learn-more">
+                            <a href="javascript:void(0);" class="learn-more">
                                 Learn More
                                 <span class="underline"></span>
                             </a>
@@ -183,7 +183,7 @@
                                     Building inclusive, skilled teams that drive innovation and opportunity.
                                 </p>
                             </div>
-                            <a href="#" class="learn-more">
+                            <a href="javascript:void(0);" class="learn-more">
                                 Learn More
                                 <span class="underline"></span>
                             </a>
@@ -202,7 +202,7 @@
                                     Boost efficiency while promoting responsible, technology-driven practices.
                                 </p>
                             </div>
-                            <a href="#" class="learn-more">
+                            <a href="javascript:void(0);" class="learn-more">
                                 Learn More
                                 <span class="underline"></span>
                             </a>
@@ -223,7 +223,7 @@
                                     driving sustainable economic growth.
                                 </p>
                             </div>
-                            <a href="#" class="learn-more">
+                            <a href="javascript:void(0);" class="learn-more">
                                 Learn More
                                 <span class="underline"></span>
                             </a>

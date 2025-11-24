@@ -115,7 +115,7 @@
                                     and significant efficiency improvements to achieve tangible growth.
                                 </p>
                             </div>
-                            <a href="#" class="learn-more">
+                            <a href="javascript:void(0);" class="learn-more">
                                 Learn More
                                 <span class="underline"></span>
                             </a>
@@ -139,7 +139,7 @@
                                     complex dispatch generation to deliver full efficiency end-to-end.
                                 </p>
                             </div>
-                            <a href="#" class="learn-more">
+                            <a href="javascript:void(0);" class="learn-more">
                                 Learn More
                                 <span class="underline"></span>
                             </a>
@@ -163,7 +163,7 @@
                                     focus on achieving more and accelerating business growth.
                                 </p>
                             </div>
-                            <a href="#" class="learn-more">
+                            <a href="javascript:void(0);" class="learn-more">
                                 Learn More
                                 <span class="underline"></span>
                             </a>
@@ -186,7 +186,7 @@
                                     successfully execute complex technology roadmaps on time and within scope.
                                 </p>
                             </div>
-                            <a href="#" class="learn-more">
+                            <a href="javascript:void(0);" class="learn-more">
                                 Learn More
                                 <span class="underline"></span>
                             </a>
@@ -220,7 +220,7 @@
                                     ensuring optimized IT operations and the agility to scale your business.
                                 </p>
                             </div>
-                            <a href="#" class="learn-more">
+                            <a href="javascript:void(0);" class="learn-more">
                                 Learn More
                                 <span class="underline"></span>
                             </a>

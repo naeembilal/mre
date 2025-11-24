@@ -1,4 +1,24 @@
 document.addEventListener('DOMContentLoaded', function () {
+    const serviceCards = document.querySelectorAll('.key-service-card');
+
+    serviceCards.forEach(card => {
+        card.addEventListener('click', function (e) {
+            e.stopPropagation();
+
+            const isAlreadyActive = this.classList.contains('active');
+
+            serviceCards.forEach(card => card.classList.remove('active'));
+
+            if (!isAlreadyActive) {
+                this.classList.add('active');
+            }
+        });
+    });
+
+    document.addEventListener('click', function (e) {
+        serviceCards.forEach(card => card.classList.remove('active'));
+    });
+
     const menuToggle = document.getElementById('menuToggle');
     const navLinks = document.getElementById('navLinks');
     const navOverlay = document.getElementById('navOverlay');
