@@ -1,0 +1,34 @@
+[phases.setup]
+nixPkgs = ["php83", "php83Packages.composer", "nodejs_20"]
+
+[phases.install]
+cmds = [
+    "composer install --no-dev --optimize-autoloader --no-interaction --prefer-dist",
+    "npm ci --include=dev"
+]
+
+[phases.build]
+cmds = [
+    "npm run build",
+    "mkdir -p /app/database",
+    "mkdir -p /app/storage/app/public",
+    "mkdir -p /app/storage/framework/{cache,sessions,views}",
+    "mkdir -p /app/storage/logs",
+    "chmod -R 775 /app/storage /app/database",
+    "php artisan migrate --force --no-interaction || true",
+    "php artisan storage:link",
+    "php artisan config:cache",
+    "php artisan route:cache",
+    "php artisan view:cache"
+]
+
+[start]
+cmd = "php artisan serve --host=0.0.0.0 --port=${PORT:-8000}"
+
+[variables]
+APP_ENV = "production"
+APP_DEBUG = "false"
+
+[staticAssets]
+# Serve static assets from public directory
+"/public" = "/_app"
