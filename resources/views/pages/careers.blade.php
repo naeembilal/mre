@@ -97,7 +97,7 @@
         </div>
     </section>
 
-    <section class="mre-team-section-wrapper fade-in-section">
+    <section class="mre-team-section-wrapper mre-hr-team fade-in-section">
         <div class="content-card-group-wrapper">
             <div class="mre-team-heading-container">
                 <h1 class="primary-heading-text">
@@ -105,12 +105,15 @@
                     HR Team
                 </h1>
             </div>
-            <div class="beige-bordered-card-container">
+            <div class="beige-bordered-card-container career-hr-team">
                 <p class="descriptive-paragraph-text">
                     “Write your story with MRE, where talent meets opportunity. Join a diverse, innovative team shaping
                     the future together. Grow, contribute, and make an impact every single day. Your next chapter starts
-                    here, let’s build it together.” <i>-Hsayna Benkhamsa, Chief of Staff</i>
+                    here, let’s build it together.”
                 </p>
+                <div class="descriptive-paragraph-title">
+                    <p><i>-Hsayna Benkhamsa, Chief of Staff</i></p>
+                </div>
             </div>
         </div>
     </section>
@@ -122,11 +125,11 @@
         <div class="testimonials-grid-container">
             <!-- Testimonial Card 1 -->
             <div class="testimonial-card-group">
-                <div class="bordered-testimonial-box">
+                <div class="bordered-testimonial-box career-testimonial-box">
                     <div class="testimonial-content-wrapper">
                         <div class="quote-text-block">
                             <p class="italic-quote-text">
-                                "I thrive on being at the <b>forefront of operational change</b>. I build the cutting-edge,
+                                "I thrive on being at the forefront of operational change. I build the cutting-edge,
                                 fully automated software that drives real success, and I have the support to constantly
                                 evolve my skills here."
                             </p>
@@ -138,11 +141,11 @@
 
             <!-- Testimonial Card 2 -->
             <div class="testimonial-card-group">
-                <div class="bordered-testimonial-box">
+                <div class="bordered-testimonial-box career-testimonial-box">
                     <div class="testimonial-content-wrapper">
                         <div class="quote-text-block">
                             <p class="italic-quote-text">
-                                "The MRE culture is truly <b>diverse and highly supportive</b>. I appreciate the blend of
+                                "The MRE culture is truly diverse and highly supportive. I appreciate the blend of
                                 people-first focus and technology, making complex staffing and HR challenges
                                 collaborative and highly rewarding."
                             </p>
@@ -154,12 +157,12 @@
 
             <!-- Testimonial Card 3 -->
             <div class="testimonial-card-group">
-                <div class="bordered-testimonial-box">
+                <div class="bordered-testimonial-box career-testimonial-box">
                     <div class="testimonial-content-wrapper">
                         <div class="quote-text-block">
                             <p class="italic-quote-text">
-                                "It's fulfilling to support a company committed to <b>financial excellence and operational
-                                    integrity</b>. I enjoy the secure, transparent, and growth-driven environment that allows us
+                                "It's fulfilling to support a company committed to financial excellence and operational
+                                    integrity. I enjoy the secure, transparent, and growth-driven environment that allows us
                                 to make a significant impact."
                             </p>
                         </div>
@@ -179,40 +182,44 @@
             </div>
 
             <div class="application-form-wrapper">
-                <form method="POST" enctype="multipart/form-data">
+                <form id="careerForm" method="POST" enctype="multipart/form-data">
                     @csrf
                     <div class="form-group">
-                        <input type="text" name="name" class="form-input" placeholder="Name" required>
+                        <input type="text" name="careerName" class="form-input" placeholder="Name" required>
                     </div>
                     <div class="form-group">
-                        <input type="email" name="email" class="form-input" placeholder="Email" required>
+                        <input type="email" name="careerEmail" class="form-input" placeholder="Email" required>
                     </div>
                     <div class="form-group">
-                        <input type="tel" name="phone" class="form-input" placeholder="Phone" required>
+                        <input type="tel" name="careerPhone" class="form-input" placeholder="Phone" required>
                     </div>
                     <div class="form-group">
-                        <select name="department" class="form-select" required>
-                            <option value="">Select Department</option>
-                            <option value="operations">Operations</option>
-                            <option value="finance">Finance</option>
-                            <option value="marketing">Marketing</option>
-                            <option value="hr">Human Resources</option>
-                            <option value="it">Information Technology</option>
+                        <select name="careerDepartment" class="form-select" required>
+                            <option value="" selected hidden disabled>Select Department</option>
+                            <option value="Operations">Operations</option>
+                            <option value="Finance">Finance</option>
+                            <option value="Marketing">Marketing</option>
+                            <option value="Human Resources">Human Resources</option>
+                            <option value="Information Technology">Information Technology</option>
                         </select>
                     </div>
                     <div class="form-group">
                         <div class="file-upload-wrapper">
                             <label for="cv-upload" class="file-upload-label">Choose File</label>
                             <span class="file-upload-text">Upload CV</span>
-                            <input type="file" id="cv-upload" name="cv" class="file-input-hidden"
+                            <input type="file" id="cv-upload" name="careerCV" class="file-input-hidden"
                                    accept=".pdf,.doc,.docx">
                         </div>
                     </div>
                     <div class="form-group">
-                        <textarea name="message" class="form-textarea" placeholder="Type your message here"
+                        <textarea name="careerMessage" class="form-textarea" placeholder="Type your message here"
                                   required></textarea>
                     </div>
-                    <button type="submit" class="submit-button">Submit</button>
+                    <div class="form-button-12">
+                        <div class="form-button-12-6">
+                            <button id="careerSubmitBtn" type="button"  class="submit-button">Submit</button>
+                        </div>
+                    </div>
                 </form>
             </div>
         </div>

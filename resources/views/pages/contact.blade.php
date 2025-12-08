@@ -19,14 +19,14 @@
             <!-- Left Side - Contact Information -->
             <div class="contact-info-panel animate-slide-left">
                 <div class="contact-info-text">
-                    <span class="contact-phone-line"><strong>Bahrain:</strong>&nbsp; +973 77996666</span>
+                    <span class="contact-phone-line">Bahrain:&nbsp; +973 77996666</span>
 
-                    <span class="contact-phone-line"><strong>Dubai:</strong>&nbsp; +973 77996666</span>
+                    <span class="contact-phone-line">Dubai:&nbsp; +973 77996666</span>
 
                     <a href="mailto:contact@mre.co" class="contact-email">contact@mre.co</a>
 
                     <span class="contact-hours">
-                        <strong>Office Hours:</strong>
+                        Office Hours:
                         &nbsp; Sunday-Thursday | 8AM-5PM
                     </span>
 
@@ -39,12 +39,12 @@
 
             <!-- Right Side - Contact Form -->
             <div class="contact-form-wrapper animate-slide-right">
-                <form method="POST">
+                <form id="contactForm">
                     @csrf
                     <div class="contact-form-group">
                         <input
                             type="text"
-                            name="name"
+                            name="contactName"
                             class="contact-form-input"
                             placeholder="Name"
                             required
@@ -54,7 +54,7 @@
                     <div class="contact-form-group">
                         <input
                             type="text"
-                            name="subject"
+                            name="contactSubject"
                             class="contact-form-input"
                             placeholder="Subject"
                             required
@@ -63,14 +63,17 @@
 
                     <div class="contact-form-group">
                         <textarea
-                            name="message"
+                            name="contactMessage"
                             class="contact-form-textarea"
                             placeholder="Type Your Message Here"
                             required
                         ></textarea>
                     </div>
-
-                    <button type="submit" class="contact-submit-button">Submit</button>
+                    <div class="form-button-12">
+                        <div class="form-button-12-6">
+                            <button id="contactSubmitBtn" type="button" class="contact-submit-button">Submit</button>
+                        </div>
+                    </div>
                 </form>
             </div>
         </div>

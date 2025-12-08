@@ -30,9 +30,10 @@
         </svg>
         <!-- Company Background -->
         <div class="info-card-wrapper">
+{{--            <b>Company Background:</b>--}}
             <div class="bordered-info-box main-info-box">
                 <p class="company-text-content">
-                    <b>Company Background:</b> MRE is the GCC's premier operational consultancy, specializing in tech-powered
+                    MRE is the GCC's premier operational consultancy, specializing in tech-powered
                     manpower solutions; we aim to be the preeminent platform pioneering seamless, intelligent, and
                     scalable operations.
                 </p>
@@ -41,9 +42,12 @@
 
         <!-- Our Mission -->
         <div class="mission-card-wrapper">
+            <div class="sub-info-box">
+                <h3 class="">Our Mission</h3>
+            </div>
             <div class="bordered-info-box">
                 <p class="company-text-content">
-                    <b>Our Mission:</b> To empower organizations with people-first AI and deep operational expertise to amplify
+                    To empower organizations with people-first AI and deep operational expertise to amplify
                     productivity and unlock the full potential of their talent.
                 </p>
             </div>
@@ -51,9 +55,12 @@
 
         <!-- Our Vision -->
         <div class="vision-card-wrapper">
+            <div class="sub-info-box">
+                <h3 class="">Our Vision</h3>
+            </div>
             <div class="bordered-info-box">
                 <p class="company-text-content">
-                    <b>Our Vision:</b> We envision a future where businesses thrive through smart, secure, and fully automated
+                    We envision a future where businesses thrive through smart, secure, and fully automated
                     solutions driven by a team as diverse as our global reach.
                 </p>
             </div>
@@ -61,9 +68,12 @@
 
         <!-- Our Values -->
         <div class="values-card-wrapper">
+            <div class="sub-info-box">
+                <h3 class="">Core Values</h3>
+            </div>
             <div class="bordered-info-box">
                 <p class="company-text-content">
-                    <b>Core Values:</b> We are defined by Innovation and Operational Integrity, rooted in our Regional Expertise,
+                    We are defined by Innovation and Operational Integrity, rooted in our Regional Expertise,
                     and driven by Empowering Talent through a Results-Driven Partnership.
                 </p>
             </div>
@@ -83,8 +93,11 @@
                     “In any growing company, there are growing pains. Those pains are partially sorted by putting in
                     policies and procedures. Those pains are also potentially sorted by bringing in more people -
                     overheads. The art isn’t to get the right people to implement the procedures. The art is to have a
-                    fully digitized system in place to solve for growing pains” <i>-Mohamed Alyaqoob, CEO & Founder</i>
+                    fully digitized system in place to solve for growing pains”
                 </p>
+                <div class="descriptive-paragraph-title">
+                    <p><i>-Mohamed Alyaqoob, CEO & Founder</i></p>
+                </div>
             </div>
         </div>
     </section>
@@ -100,7 +113,7 @@
                     <div class="testimonial-content-wrapper">
                         <div class="quote-text-block">
                             <p class="italic-quote-text">
-                                “The implementation of <b>smart patrols</b> and <b>automated manager communication</b> immediately cut
+                                “The implementation of smart patrols and automated manager communication immediately cut
                                 our incident response time, providing us with real-time control and compliance”
                             </p>
                         </div>
@@ -115,8 +128,8 @@
                     <div class="testimonial-content-wrapper">
                         <div class="quote-text-block">
                             <p class="italic-quote-text">
-                                “MRE's platform is a true <b>end-to-end solution</b>; their <b>dispatch generation</b> and <b>Fleet asset
-                                    management</b> delivered unparalleled operational visibility.”
+                                “MRE's platform is a true end-to-end solution; their dispatch generation and Fleet asset
+                                    management delivered unparalleled operational visibility.”
                             </p>
                         </div>
                         <p class="client-attribution-text">-Last Mile Logistics</p>
@@ -130,7 +143,7 @@
                     <div class="testimonial-content-wrapper">
                         <div class="quote-text-block">
                             <p class="italic-quote-text">
-                                “MRE’s deep <b>regional expertise</b> and <b>contract-based staffing enforcement</b> are indispensable
+                                “MRE’s deep regional expertise and contract-based staffing enforcement are indispensable
                                 to our compliant, scalable success across the GCC.”
                             </p>
                         </div>
@@ -152,70 +165,46 @@
                 <div class="carousel-container">
                     <div class="carousel-wrapper" id="carouselWrapper">
                         <!-- Card 1: Business Consultancy -->
-                        <div class="key-service-card">
-                            <div class="card-icon">
-                                <img src="{{asset('images/icon-chart.png')}}">
-                            </div>
+                        <div class="key-service-card mre-adv-card">
                             <div class="card-content">
-                                <h3>We’ve Got Your Back</h3>
-                                <p class="hover-text">
+                                <h3 class="mre-card-heading">We’ve Got Your Back</h3>
+                                <p class="mre-card-description">
                                     From processes to execution, we handle it all.
                                     <br><br>
                                     Empowering your team to focus on sustainable growth.
                                 </p>
                             </div>
-                            <a href="javascript:void(0);" class="learn-more">
-                                Learn More
-                                <span class="underline"></span>
-                            </a>
                         </div>
 
                         <!-- Card 2: Operations Management -->
-                        <div class="key-service-card alt-border">
-                            <div class="card-icon">
-                                <img src="{{asset('images/icon-gear.png')}}">
-                            </div>
+                        <div class="key-service-card mre-adv-card">
                             <div class="card-content">
-                                <h3>Talent Without Borders</h3>
-                                <p class="hover-text">
+                                <h3 class="mre-card-heading">Talent Without Borders</h3>
+                                <p class="mre-card-description">
                                     Connect with top professionals from diverse backgrounds.
                                     <br><br>
                                     Building inclusive, skilled teams that drive innovation and opportunity.
                                 </p>
                             </div>
-                            <a href="javascript:void(0);" class="learn-more">
-                                Learn More
-                                <span class="underline"></span>
-                            </a>
                         </div>
 
                         <!-- Card 3: HR & Talent Solutions -->
-                        <div class="key-service-card alt-border">
-                            <div class="card-icon">
-                                <img src="{{asset('images/icon-people.png')}}">
-                            </div>
+                        <div class="key-service-card mre-adv-card">
                             <div class="card-content">
-                                <h3>Automation Made Easy</h3>
-                                <p class="hover-text">
+                                <h3 class="mre-card-heading">Automation Made Easy</h3>
+                                <p class="mre-card-description">
                                     Turn manual work into seamless, automated operations.
                                     <br><br>
                                     Boost efficiency while promoting responsible, technology-driven practices.
                                 </p>
                             </div>
-                            <a href="javascript:void(0);" class="learn-more">
-                                Learn More
-                                <span class="underline"></span>
-                            </a>
                         </div>
 
                         <!-- Card 4: Project Management -->
-                        <div class="key-service-card alt-border">
-                            <div class="card-icon">
-                                <img src="{{asset('images/icon-project.png')}}">
-                            </div>
+                        <div class="key-service-card mre-adv-card">
                             <div class="card-content">
-                                <h3>SDGs & vision 2030</h3>
-                                <p class="hover-text">
+                                <h3 class="mre-card-heading">SDGs & vision 2030</h3>
+                                <p class="mre-card-description">
                                     Pioneers innovative solutions and smart infrastructure, shaping industries of
                                     tomorrow.
                                     <br><br>
@@ -223,10 +212,6 @@
                                     driving sustainable economic growth.
                                 </p>
                             </div>
-                            <a href="javascript:void(0);" class="learn-more">
-                                Learn More
-                                <span class="underline"></span>
-                            </a>
                         </div>
                     </div>
                 </div>

@@ -1,14 +1,17 @@
 @extends('layouts.app')
 @section('title', 'Home')
-
 @section('content')
     <section class="hero fade-in-section">
         <div class="hero-content">
-            <h1 class="hero-title">Transform The Habit</h1>
+            <h1 class="hero-title">
+                Transform<br>The Habit
+            </h1>
+
             <p class="hero-description">
-                At MRE, we turn manual work into smart, automated operations that boost efficiency and elevate people
-                management. Our solutions go beyond digitization, creating seamless workflows, empowering teams, and
-                driving sustainable growth aligned with the GCC’s Vision 2030.
+                At MRE, we turn manual work into smart, automated operations that boost
+                efficiency and elevate people management. Our solutions go beyond digitization,
+                creating seamless workflows, empowering teams, and driving sustainable growth
+                aligned with the GCC’s Vision 2030.
             </p>
         </div>
 
@@ -46,8 +49,8 @@
                 </clipPath>
             </defs>
         </svg>
-        <div class="services-container">
-            <div class="services-intro">
+        <div class="services-container" id="servicesContainer">
+            <div class="services-intro" id="servicesIntro">
                 <p class="intro-text">
                     Look no further than MRE, GCC's leading operational and management consultancy, pioneering the new
                     era of tech-powered manpower solutions. MRE empowers your entire organization, from the front office
@@ -55,10 +58,10 @@
                 </p>
             </div>
 
-            <div class="services-content">
-                <h2 class="services-title">Do Things Differently</h2>
+            <div class="services-content" id="servicesContent">
+                <h2 class="services-title" id="servicesContentTitle">Do Things Differently</h2>
 
-                <div class="services-cards">
+                <div class="services-cards" id="servicesContentCards">
                     <div class="service-card">
                         <h3 class="service-title">Consulting</h3>
                         <p class="service-description">
@@ -104,7 +107,8 @@
                                 <img src="{{asset('images/icon-chart.png')}}">
                             </div>
                             <div class="card-content">
-                                <h3>Business Consultancy: Strategy, Structure, Process Optimization</h3>
+                                <h3>Business Consultancy</h3>
+                                <p>Strategy, Structure, Process Optimization</p>
                                 <p class="hover-text">
                                     We drive meaningful change by aligning your strategy, structure, and processes with
                                     high-level organizational goals. We specialize in providing the data-driven insights
@@ -127,7 +131,8 @@
                                 <img src="{{asset('images/icon-gear.png')}}">
                             </div>
                             <div class="card-content">
-                                <h3>Operations Management: Workflow, Resource Planning, Regional Coverage</h3>
+                                <h3>Operations Management</h3>
+                                <p>Workflow, Resource Planning, Regional Coverage</p>
                                 <p class="hover-text">
                                     We manage the entire operational lifecycle with full attendance, payroll, and HR
                                     automation. This includes smart leave management, scheduling, deployment, and
@@ -151,7 +156,8 @@
                                 <img src="{{asset('images/icon-people.png')}}">
                             </div>
                             <div class="card-content">
-                                <h3>HR & Talent Solutions: Recruitment, Onboarding, Talent Lifecycle</h3>
+                                <h3>HR & Talent Solutions</h3>
+                                <p>Recruitment, Onboarding, Talent Lifecycle</p>
                                 <p class="hover-text">
                                     Smart Staffing, Seamless Success. We transform recruitment into a streamlined,
                                     automated process from global talent sourcing to onboarding and post-hire support.
@@ -175,7 +181,8 @@
                                 <img src="{{asset('images/icon-project.png')}}">
                             </div>
                             <div class="card-content">
-                                <h3>Project Management: Planning, Execution, Technology Integration</h3>
+                                <h3>Project Management</h3>
+                                <p>Planning, Execution, Technology Integration</p>
                                 <p class="hover-text">
                                     We deliver complex project portfolios using expert agile and project management
                                     methodologies. Our focus is aligning business objectives with technology teams to
@@ -209,7 +216,8 @@
                                 </div>
                             </div>
                             <div class="card-content">
-                                <h3>Automation: Digital Systems, Paperless Processes, AI Integration</h3>
+                                <h3>Automation</h3>
+                                <p>Digital Systems, Paperless Processes, AI Integration</p>
                                 <p class="hover-text">
                                     MRE champions a secure, paperless, automated, and digital approach. We leverage
                                     technology as a catalyst for significant operational improvement, maximizing speed
@@ -233,7 +241,7 @@
         </div>
     </section>
 
-    <section class="fms-discovery-wrapper fade-in-section">
+    <section class="fms-discovery-wrapper fade-in-section" style="display: none;">
         <!-- Background Decorations -->
         <div class="fms-decoration-left">
             <img src="{{asset('images/Layer_1.png')}}">
@@ -243,16 +251,16 @@
         </div>
 
         <!-- Main Content Grid -->
-        <div class="fms-content-grid">
+        <div class="fms-content-grid" id="fmsContentGrid">
             <!-- Phone Showcase -->
-            <div class="fms-phone-showcase">
+            <div class="fms-phone-showcase" id="fmsPhoneShowcase">
                 <img src="{{asset('images/phone.png')}}"
                      alt="FMS Mobile App Interface"
                      class="fms-phone-image">
             </div>
 
             <!-- Text Content -->
-            <div class="fms-text-content">
+            <div class="fms-text-content" id="fmsTextContent">
                 <div>
                     <h1 class="fms-heading-primary">Discover FMS</h1>
                     <p class="fms-subtitle-text">About Fms Bio</p>
@@ -270,8 +278,10 @@
 
     <section class="fms-industries-wrapper fade-in-section">
         <div class="fms-industries-container">
-            <h3>Industries<br>Served</h3>
-            <p>The different industries we hire for, including but not limited to these.</p>
+            <div class="fms-industries-title">
+                <h3>Industries<br>Served</h3>
+                <p>The Different Industries We Hire For, Including But Not Limited To These.</p>
+            </div>
             <div class="testimonials-grid-container home">
                 <div class="testimonial-card-group">
                     <div class="bordered-testimonial-box">

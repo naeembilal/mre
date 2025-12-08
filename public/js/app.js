@@ -79,7 +79,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
     let currentIndex = 0;
     let autoPlayInterval;
-    let isAutoPlaying = true;
+    let isAutoPlaying = false;
     const wrapper = document.getElementById('carouselWrapper');
     const cards = document.querySelectorAll('.key-service-card');
     const totalCards = cards.length;
@@ -403,5 +403,35 @@ document.addEventListener('DOMContentLoaded', function () {
     fadeSections.forEach(section => {
         fadeInObserver.observe(section);
     });
+
+
+    const carouselContainer = document.querySelector('.carousel-container');
+    let wheelTimeout = null;
+
+    if (!carouselContainer) {
+        return;
+    }
+
+    carouselContainer.addEventListener('wheel', function (e) {
+        e.preventDefault();
+
+        if (wheelTimeout) return;
+
+        if (e.deltaY > 0) {
+            moveCarousel(1);
+        } else {
+            moveCarousel(-1);
+        }
+
+        wheelTimeout = setTimeout(() => {
+            wheelTimeout = null;
+        }, 400);
+    }, { passive: false });
+
+});
+
+
+document.addEventListener("DOMContentLoaded", () => {
+
 });
 
