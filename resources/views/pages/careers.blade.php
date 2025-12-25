@@ -1,5 +1,5 @@
 @extends('layouts.app')
-@section('title', 'Careers')
+@section('title', 'Your Story')
 
 @section('content')
     <section class="story-hero-wrapper fade-in-section">

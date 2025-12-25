@@ -1,8 +1,8 @@
-document.addEventListener('DOMContentLoaded', function () {
+document.addEventListener('DOMContentLoaded', function() {
     const serviceCards = document.querySelectorAll('.key-service-card');
 
     serviceCards.forEach(card => {
-        card.addEventListener('click', function (e) {
+        card.addEventListener('click', function(e) {
             e.stopPropagation();
 
             const isAlreadyActive = this.classList.contains('active');
@@ -15,7 +15,7 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     });
 
-    document.addEventListener('click', function (e) {
+    document.addEventListener('click', function(e) {
         serviceCards.forEach(card => card.classList.remove('active'));
     });
 
@@ -27,7 +27,7 @@ document.addEventListener('DOMContentLoaded', function () {
     menuToggle.addEventListener('click', toggleMenu);
     navOverlay.addEventListener('click', toggleMenu);
 
-// Close menu when clicking on a link (for mobile)
+    // Close menu when clicking on a link (for mobile)
     document.querySelectorAll('.nav-links a, .mobile-cta-button').forEach(link => {
         link.addEventListener('click', () => {
             if (window.innerWidth <= 968) {
@@ -36,7 +36,7 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     });
 
-// Close menu on window resize if it goes beyond mobile breakpoint
+    // Close menu on window resize if it goes beyond mobile breakpoint
     window.addEventListener('resize', () => {
         if (window.innerWidth > 968) {
             // Remove active classes
@@ -52,7 +52,7 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     });
 
-// Close menu with Escape key
+    // Close menu with Escape key
     document.addEventListener('keydown', (e) => {
         if (e.key === 'Escape' && navLinks.classList.contains('active')) {
             toggleMenu();
@@ -60,7 +60,7 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 
     // Close menu when clicking outside
-    document.addEventListener('click', function (event) {
+    document.addEventListener('click', function(event) {
         const nav = document.querySelector('nav');
         const navLinks = document.getElementById('navLinks');
         const menuToggle = document.querySelector('.menu-toggle');
@@ -70,9 +70,9 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     });
 
-// Close menu when clicking on a link
+    // Close menu when clicking on a link
     document.querySelectorAll('.nav-links a').forEach(link => {
-        link.addEventListener('click', function () {
+        link.addEventListener('click', function() {
             document.getElementById('navLinks').classList.remove('active');
         });
     });
@@ -81,25 +81,25 @@ document.addEventListener('DOMContentLoaded', function () {
     let autoPlayInterval;
     let isAutoPlaying = false;
     const wrapper = document.getElementById('carouselWrapper');
-    const cards = document.querySelectorAll('.key-service-card');
+    const cards = document.querySelectorAll('.key-service-card, .our-story-card');
     const totalCards = cards.length;
     const dotsContainer = document.getElementById('carouselDots');
     const prevBtn = document.getElementById('prevBtn');
     const nextBtn = document.getElementById('nextBtn');
 
-// Calculate cards per view based on screen size - 2 on desktop, 1 on mobile
+    // Calculate cards per view based on screen size - 2 on desktop, 1 on mobile
     function getCardsPerView() {
         // const width = window.innerWidth;
         // if (width >= 768) return 2; // 2 cards on tablet and desktop
         return 1; // 1 card on mobile
     }
 
-// Calculate total pages based on cards per view
+    // Calculate total pages based on cards per view
     function getTotalPages() {
         return Math.ceil(totalCards / getCardsPerView());
     }
 
-// Create dots based on total pages
+    // Create dots based on total pages
     function createDots() {
         dotsContainer.innerHTML = '';
         const totalPages = getTotalPages();
@@ -112,7 +112,7 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     }
 
-// Update dots
+    // Update dots
     function updateDots() {
         const dots = document.querySelectorAll('.dot');
         const currentPage = Math.floor(currentIndex / getCardsPerView());
@@ -121,7 +121,7 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     }
 
-// Move carousel
+    // Move carousel
     function moveCarousel(direction) {
         const cardsPerView = getCardsPerView();
         const totalPages = getTotalPages();
@@ -139,7 +139,7 @@ document.addEventListener('DOMContentLoaded', function () {
         resetAutoPlay();
     }
 
-// Go to specific slide
+    // Go to specific slide
     function goToSlide(page) {
         const cardsPerView = getCardsPerView();
         const totalPages = getTotalPages();
@@ -152,7 +152,7 @@ document.addEventListener('DOMContentLoaded', function () {
         resetAutoPlay();
     }
 
-// Update carousel position
+    // Update carousel position
     function updateCarousel() {
         if (cards.length === 0) return;
 
@@ -165,7 +165,7 @@ document.addEventListener('DOMContentLoaded', function () {
         updateButtons();
     }
 
-// Update button states
+    // Update button states
     function updateButtons() {
         if (!prevBtn || !nextBtn) return;
 
@@ -177,7 +177,7 @@ document.addEventListener('DOMContentLoaded', function () {
         nextBtn.disabled = totalPages <= 1 || currentPage === totalPages - 1;
     }
 
-// Auto-play functionality
+    // Auto-play functionality
     function startAutoPlay() {
         if (autoPlayInterval) {
             clearInterval(autoPlayInterval);
@@ -233,7 +233,7 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     }
 
-// Handle window resize
+    // Handle window resize
     let resizeTimer;
     window.addEventListener('resize', () => {
         clearTimeout(resizeTimer);
@@ -253,7 +253,7 @@ document.addEventListener('DOMContentLoaded', function () {
         }, 250);
     });
 
-// Event listeners for navigation buttons
+    // Event listeners for navigation buttons
     if (prevBtn) {
         prevBtn.addEventListener('click', () => moveCarousel(-1));
     }
@@ -262,7 +262,7 @@ document.addEventListener('DOMContentLoaded', function () {
         nextBtn.addEventListener('click', () => moveCarousel(1));
     }
 
-// Keyboard navigation
+    // Keyboard navigation
     document.addEventListener('keydown', (e) => {
         if (e.key === 'ArrowLeft') {
             moveCarousel(-1);
@@ -271,7 +271,7 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     });
 
-// Touch swipe support
+    // Touch swipe support
     let startX = 0;
     let endX = 0;
 
@@ -313,7 +313,7 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     }
 
-// Initialize carousel
+    // Initialize carousel
     function initCarousel() {
         if (cards.length === 0) {
             console.warn('No carousel cards found');
@@ -331,7 +331,7 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     }
 
-// Update card widths based on responsive breakpoints
+    // Update card widths based on responsive breakpoints
     function updateCardWidths() {
         const cardsPerView = getCardsPerView();
         const containerWidth = wrapper.parentElement.offsetWidth;
@@ -346,14 +346,14 @@ document.addEventListener('DOMContentLoaded', function () {
         });*/
     }
 
-// Initialize when DOM is loaded
+    // Initialize when DOM is loaded
     if (document.readyState === 'loading') {
         document.addEventListener('DOMContentLoaded', initCarousel);
     } else {
         initCarousel();
     }
 
-// Update card widths on resize
+    // Update card widths on resize
     window.addEventListener('resize', () => {
         clearTimeout(resizeTimer);
         resizeTimer = setTimeout(() => {
@@ -362,7 +362,7 @@ document.addEventListener('DOMContentLoaded', function () {
         }, 250);
     });
 
-// Export functions for global access if needed
+    // Export functions for global access if needed
     window.carousel = {
         moveCarousel,
         goToSlide,
@@ -405,33 +405,111 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 
 
-    const carouselContainer = document.querySelector('.carousel-container');
-    let wheelTimeout = null;
 
-    if (!carouselContainer) {
-        return;
-    }
+    // const carouselContainer = document.querySelector('.carousel-container');
+    // // let wheelTimeout = null;
 
-    carouselContainer.addEventListener('wheel', function (e) {
-        e.preventDefault();
+    // if (!carouselContainer) {
+    //     return;
+    // }
 
-        if (wheelTimeout) return;
+    // let isDragging = false;
+    // // let startX = 0;
+    // let dragged = false;
+    // const dragThreshold = 10; // px — small movement cancels click
+    // const slideThreshold = 50; // px — triggers slide
 
-        if (e.deltaY > 0) {
-            moveCarousel(1);
-        } else {
-            moveCarousel(-1);
-        }
+    // carouselContainer.addEventListener('pointerdown', (e) => {
+    //     isDragging = true;
+    //     dragged = false;
+    //     startX = e.clientX;
+    // });
 
-        wheelTimeout = setTimeout(() => {
-            wheelTimeout = null;
-        }, 400);
-    }, { passive: false });
+    // carouselContainer.addEventListener('pointermove', (e) => {
+    //     if (!isDragging) return;
+
+    //     const diff = e.clientX - startX;
+
+    //     if (Math.abs(diff) > dragThreshold) {
+    //         dragged = true;
+    //     }
+
+    //     if (Math.abs(diff) > slideThreshold) {
+    //         isDragging = false;
+
+    //         if (diff < 0) {
+    //             moveCarousel(1);
+    //         } else {
+    //             moveCarousel(-1);
+    //         }
+    //     }
+    // });
+
+    // carouselContainer.addEventListener('pointerup', () => {
+    //     isDragging = false;
+    // });
+
+
+    // document.querySelectorAll('.learn-more').forEach(btn => {
+    //     btn.addEventListener('click', function(e) {
+    //         if (dragged) {
+    //             e.preventDefault();
+    //             e.stopImmediatePropagation();
+    //         }
+    //     });
+    // });
+
+
+
+
+
+    // carouselContainer.addEventListener('wheel', function(e) {
+    //     e.preventDefault();
+
+    //     if (wheelTimeout) return;
+
+    //     if (e.deltaY > 0) {
+    //         moveCarousel(1);
+    //     } else {
+    //         moveCarousel(-1);
+    //     }
+
+    //     wheelTimeout = setTimeout(() => {
+    //         wheelTimeout = null;
+    //     }, 400);
+    // }, {
+    //     passive: false
+    // });
 
 });
 
 
 document.addEventListener("DOMContentLoaded", () => {
+    function toggleKeyServicesView() {
+        const staticSection = document.getElementById('keyServicesStatic');
+        const carousel = document.getElementById('keyServicesCarousel');
+        const dots = document.getElementById('carouselDots');
 
+        if (window.innerWidth < 1200) {
+            // Show include section
+            staticSection.style.display = 'block';
+
+            // Hide carousel
+            carousel.style.display = 'none';
+            dots.style.display = 'none';
+        } else {
+            // Hide include section
+            staticSection.style.display = 'none';
+
+            // Show carousel
+            carousel.style.display = 'block';
+            dots.style.display = 'flex';
+        }
+    }
+
+    // Run on load
+    window.addEventListener('load', toggleKeyServicesView);
+
+    // Run on resize
+    window.addEventListener('resize', toggleKeyServicesView);
 });
-

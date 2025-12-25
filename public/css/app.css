@@ -22,8 +22,12 @@ body {
     background-color: var(--bg-cream);
     color: var(--primary-blue);
 }
+
 input,
-textarea, ::placeholder, select, button {
+textarea,
+::placeholder,
+select,
+button {
     font-family: 'Futura PT', sans-serif;
 }
 
@@ -399,6 +403,61 @@ nav {
     overflow: hidden;
     padding: 80px 0;
     width: 100%;
+    user-select: none;
+    touch-action: pan-y;
+}
+
+/* Carousel Navigation Arrows */
+.carousel-nav-arrows {
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    z-index: 10;
+    /* padding: 12px 18px; */
+    /* background: var(--primary-blue); */
+    /* border-radius: 60% 40% 50% 60% / 70% 60% 50% 60%; */
+    /* transform: rotate(-5deg); */
+    /* box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15); */
+}
+
+.carousel-nav-btn {
+    width: 40px;
+    height: 40px;
+    border: none;
+    background: var(--primary-blue);
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    padding: 0;
+    color: var(--white);
+}
+
+.carousel-nav-btn:hover:not(:disabled) {
+    /* background: rgba(255, 255, 255, 0.9); */
+    /* background: var(--primary-blue); */
+    /* transform: scale(1.1); */
+}
+
+.carousel-nav-btn:disabled {
+    opacity: 0.3;
+    cursor: not-allowed;
+}
+
+.carousel-nav-btn:disabled:hover {
+    transform: scale(1);
+}
+
+.carousel-nav-btn svg {
+    stroke: var(--white);
+    transition: stroke 0.3s ease;
+    width: 20px;
+    height: 20px;
 }
 
 .carousel-wrapper {
@@ -408,7 +467,8 @@ nav {
     will-change: transform;
 }
 
-.key-service-card {
+.key-service-card,
+.our-story-card {
     min-height: 570px;
     flex: 0 0 calc(50% - 50px);
     background: rgba(232, 223, 217, 0.5);
@@ -446,19 +506,23 @@ nav {
     min-width: 250px;
     cursor: pointer;
 }
-.mre-card-heading{
 
-}
-.mre-card-description{
+.mre-card-heading {}
+
+.mre-card-description {
     display: inline;
 }
 
-.hover-text {
+.hover-text,
+.consultation-btn-container {
     display: none;
 }
 
 .key-service-card.active {
-    transform: translateX(15px); /* moves card right */
+    min-height: 600px;
+    padding: 50px 60px 130px 60px;
+    transform: translateX(15px);
+    /* moves card right */
     flex: 0 0 calc(91% - 15px);
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
     border-color: var(--primary-blue);
@@ -466,6 +530,12 @@ nav {
 
 .key-service-card.active .hover-text {
     display: inline;
+}
+
+.key-service-card.active .consultation-btn-container {
+    display: block;
+    position: absolute;
+    bottom: 1.5rem;
 }
 
 .key-service-card.active .learn-more {
@@ -495,11 +565,25 @@ nav {
     border-radius: 2px;
 }
 
-.icon-chart .bar:nth-child(1) { height: 22px; }
-.icon-chart .bar:nth-child(2) { height: 42px; }
-.icon-chart .bar:nth-child(3) { height: 30px; }
-.icon-chart .bar:nth-child(4) { height: 42px; }
-.icon-chart .bar:nth-child(5) { height: 51px; }
+.icon-chart .bar:nth-child(1) {
+    height: 22px;
+}
+
+.icon-chart .bar:nth-child(2) {
+    height: 42px;
+}
+
+.icon-chart .bar:nth-child(3) {
+    height: 30px;
+}
+
+.icon-chart .bar:nth-child(4) {
+    height: 42px;
+}
+
+.icon-chart .bar:nth-child(5) {
+    height: 51px;
+}
 
 /* Operations Management Icon - Gear */
 .icon-gear {
@@ -875,7 +959,7 @@ nav {
     background-repeat: no-repeat;
 }
 
-.fms-industries-title{
+.fms-industries-title {
     max-width: 1420px;
     margin: 0 auto;
 }
@@ -934,9 +1018,17 @@ nav {
     height: 314px;
 }
 
-.mre-divider-left { left: 25%; }
-.mre-divider-center { left: 50%; }
-.mre-divider-right { left: 75%; }
+.mre-divider-left {
+    left: 25%;
+}
+
+.mre-divider-center {
+    left: 50%;
+}
+
+.mre-divider-right {
+    left: 75%;
+}
 
 /* Individual CTA Columns */
 .mre-cta-column {
@@ -1106,6 +1198,7 @@ nav {
         opacity: 0;
         transform: translateY(30px);
     }
+
     to {
         opacity: 1;
         transform: translateY(0);
@@ -1123,8 +1216,7 @@ nav {
     z-index: 2;
 }
 
-.company-heading-line{
-}
+.company-heading-line {}
 
 .info-card-wrapper,
 .mission-card-wrapper,
@@ -1151,7 +1243,7 @@ nav {
     transition: all 0.3s ease;
 }
 
-.bordered-info-box:before{
+.bordered-info-box:before {
     /*top: -85px;*/
     /*height: 800px;*/
     content: "";
@@ -1163,7 +1255,7 @@ nav {
     opacity: 0.7;
 }
 
-.sub-info-box{
+.sub-info-box {
     /*position: relative;*/
     /*width: 2px;          !* line thickness *!*/
     /*height: 100%;*/
@@ -1171,7 +1263,7 @@ nav {
     /*margin-top: 12px;*/
 }
 
-.sub-info-box{
+.sub-info-box {
     width: fit-content;
     position: relative;
     color: #ffffff;
@@ -1181,7 +1273,8 @@ nav {
     left: -16rem;
     bottom: -6rem;
 }
-.sub-info-box h3{
+
+.sub-info-box h3 {
     position: relative;
     left: 2rem;
     font-weight: 500;
@@ -1190,13 +1283,16 @@ nav {
 .sub-info-box::before {
     content: "";
     position: absolute;
-    top: 30%;            /* place dot above the top of the line */
+    top: 30%;
+    /* place dot above the top of the line */
     left: 154px;
     transform: translateX(-50%);
-    width: 10px;           /* dot size */
+    width: 10px;
+    /* dot size */
     height: 10px;
     border-radius: 50%;
-    background: #ffffff;   /* filled white */
+    background: #ffffff;
+    /* filled white */
 }
 
 .sub-info-box::after {
@@ -1264,7 +1360,8 @@ nav {
     background-position: center;
     background-repeat: no-repeat;
 }
-.mre-hr-team{
+
+.mre-hr-team {
     /*background: none;*/
     margin-bottom: -9rem;
 }
@@ -1298,18 +1395,19 @@ nav {
     margin: 0 auto;
 }
 
-.career-hr-team{
+.career-hr-team {
     width: 1010px;
     left: 26rem;
     height: 24rem;
     bottom: 9rem;
 }
 
-.descriptive-paragraph-title{
+.descriptive-paragraph-title {
     text-align: -webkit-right;
     margin-top: 2rem;
 }
-.descriptive-paragraph-title p{
+
+.descriptive-paragraph-title p {
     font-size: 30px;
 }
 
@@ -1419,7 +1517,8 @@ nav {
     justify-content: space-between;
     transition: all 0.3s ease;
 }
-.career-testimonial-box{
+
+.career-testimonial-box {
     padding: 50px 26px;
     max-height: 410px;
 }
@@ -1526,18 +1625,24 @@ nav {
 }
 
 @keyframes floatLeft {
-    0%, 100% {
+
+    0%,
+    100% {
         transform: rotate(-8deg) translateY(0);
     }
+
     50% {
         transform: rotate(-8deg) translateY(-20px);
     }
 }
 
 @keyframes floatRight {
-    0%, 100% {
+
+    0%,
+    100% {
         transform: rotate(5deg) translateY(0);
     }
+
     50% {
         transform: rotate(5deg) translateY(-15px);
     }
@@ -1560,12 +1665,29 @@ nav {
     z-index: 20;
 }
 
-.polaroid-photo-card:nth-child(1) { transform: rotate(-12deg); }
-.polaroid-photo-card:nth-child(2) { transform: rotate(8deg); }
-.polaroid-photo-card:nth-child(3) { transform: rotate(-5deg); }
-.polaroid-photo-card:nth-child(4) { transform: rotate(15deg); }
-.polaroid-photo-card:nth-child(5) { transform: rotate(-8deg); }
-.polaroid-photo-card:nth-child(6) { transform: rotate(6deg); }
+.polaroid-photo-card:nth-child(1) {
+    transform: rotate(-12deg);
+}
+
+.polaroid-photo-card:nth-child(2) {
+    transform: rotate(8deg);
+}
+
+.polaroid-photo-card:nth-child(3) {
+    transform: rotate(-5deg);
+}
+
+.polaroid-photo-card:nth-child(4) {
+    transform: rotate(15deg);
+}
+
+.polaroid-photo-card:nth-child(5) {
+    transform: rotate(-8deg);
+}
+
+.polaroid-photo-card:nth-child(6) {
+    transform: rotate(6deg);
+}
 
 .polaroid-image-wrapper {
     width: 100%;
@@ -1907,47 +2029,79 @@ nav {
 }
 
 /* Optional: Stagger animations for children elements */
-.fade-in-section.stagger-children > * {
+.fade-in-section.stagger-children>* {
     opacity: 0;
     transform: translateY(30px);
     transition: opacity 0.6s ease-out, transform 0.6s ease-out;
 }
 
-.fade-in-section.visible.stagger-children > * {
+.fade-in-section.visible.stagger-children>* {
     opacity: 1;
     transform: translateY(0);
 }
 
 /* Different delays for staggered children */
-.fade-in-section.visible.stagger-children > *:nth-child(1) { transition-delay: 0.1s; }
-.fade-in-section.visible.stagger-children > *:nth-child(2) { transition-delay: 0.2s; }
-.fade-in-section.visible.stagger-children > *:nth-child(3) { transition-delay: 0.3s; }
-.fade-in-section.visible.stagger-children > *:nth-child(4) { transition-delay: 0.4s; }
-.fade-in-section.visible.stagger-children > *:nth-child(5) { transition-delay: 0.5s; }
+.fade-in-section.visible.stagger-children>*:nth-child(1) {
+    transition-delay: 0.1s;
+}
+
+.fade-in-section.visible.stagger-children>*:nth-child(2) {
+    transition-delay: 0.2s;
+}
+
+.fade-in-section.visible.stagger-children>*:nth-child(3) {
+    transition-delay: 0.3s;
+}
+
+.fade-in-section.visible.stagger-children>*:nth-child(4) {
+    transition-delay: 0.4s;
+}
+
+.fade-in-section.visible.stagger-children>*:nth-child(5) {
+    transition-delay: 0.5s;
+}
 
 /* Specific animations for different sections */
-.hero.visible .hero-content > *,
-.services-section.visible .services-content > *,
-.key-services-section.visible .left-content > * {
+.hero.visible .hero-content>*,
+.services-section.visible .services-content>*,
+.key-services-section.visible .left-content>* {
     opacity: 0;
     transform: translateY(30px);
     transition: opacity 0.6s ease-out, transform 0.6s ease-out;
 }
 
-.hero.visible .hero-title { transition-delay: 0.2s; }
-.hero.visible .hero-description { transition-delay: 0.4s; }
-.hero.visible .stats { transition-delay: 0.6s; }
+.hero.visible .hero-title {
+    transition-delay: 0.2s;
+}
 
-.services-section.visible .services-title { transition-delay: 0.2s; }
-.services-section.visible .services-cards { transition-delay: 0.4s; }
+.hero.visible .hero-description {
+    transition-delay: 0.4s;
+}
 
-.key-services-section.visible .main-heading { transition-delay: 0.2s; }
-.key-services-section.visible .description { transition-delay: 0.4s; }
+.hero.visible .stats {
+    transition-delay: 0.6s;
+}
+
+.services-section.visible .services-title {
+    transition-delay: 0.2s;
+}
+
+.services-section.visible .services-cards {
+    transition-delay: 0.4s;
+}
+
+.key-services-section.visible .main-heading {
+    transition-delay: 0.2s;
+}
+
+.key-services-section.visible .description {
+    transition-delay: 0.4s;
+}
 
 /* When section becomes visible, animate children */
-.hero.visible .hero-content > *,
-.services-section.visible .services-content > *,
-.key-services-section.visible .left-content > * {
+.hero.visible .hero-content>*,
+.services-section.visible .services-content>*,
+.key-services-section.visible .left-content>* {
     opacity: 1;
     transform: translateY(0);
 }
@@ -1959,10 +2113,21 @@ nav {
     transition: opacity 0.6s ease-out, transform 0.6s ease-out;
 }
 
-.hero-backdrop-container.visible .main-info-box { transition-delay: 0.2s; }
-.hero-backdrop-container.visible .mission-card-wrapper .bordered-info-box { transition-delay: 0.4s; }
-.hero-backdrop-container.visible .vision-card-wrapper .bordered-info-box { transition-delay: 0.6s; }
-.hero-backdrop-container.visible .values-card-wrapper .bordered-info-box { transition-delay: 0.8s; }
+.hero-backdrop-container.visible .main-info-box {
+    transition-delay: 0.2s;
+}
+
+.hero-backdrop-container.visible .mission-card-wrapper .bordered-info-box {
+    transition-delay: 0.4s;
+}
+
+.hero-backdrop-container.visible .vision-card-wrapper .bordered-info-box {
+    transition-delay: 0.6s;
+}
+
+.hero-backdrop-container.visible .values-card-wrapper .bordered-info-box {
+    transition-delay: 0.8s;
+}
 
 .hero-backdrop-container.visible .bordered-info-box {
     opacity: 1;
@@ -1998,9 +2163,17 @@ nav {
     transition: opacity 0.6s ease-out, transform 0.6s ease-out;
 }
 
-.testimonials-section-backdrop.visible .testimonial-card-group:nth-child(1) { transition-delay: 0.2s; }
-.testimonials-section-backdrop.visible .testimonial-card-group:nth-child(2) { transition-delay: 0.4s; }
-.testimonials-section-backdrop.visible .testimonial-card-group:nth-child(3) { transition-delay: 0.6s; }
+.testimonials-section-backdrop.visible .testimonial-card-group:nth-child(1) {
+    transition-delay: 0.2s;
+}
+
+.testimonials-section-backdrop.visible .testimonial-card-group:nth-child(2) {
+    transition-delay: 0.4s;
+}
+
+.testimonials-section-backdrop.visible .testimonial-card-group:nth-child(3) {
+    transition-delay: 0.6s;
+}
 
 .testimonials-section-backdrop.visible .testimonial-card-group {
     opacity: 1;
@@ -2021,11 +2194,25 @@ nav {
     transition: opacity 0.6s ease-out, transform 0.6s ease-out;
 }
 
-.our-story-key-services.visible .key-service-card:nth-child(1) { transition-delay: 0.3s; }
-.our-story-key-services.visible .key-service-card:nth-child(2) { transition-delay: 0.4s; }
-.our-story-key-services.visible .key-service-card:nth-child(3) { transition-delay: 0.5s; }
-.our-story-key-services.visible .key-service-card:nth-child(4) { transition-delay: 0.6s; }
-.our-story-key-services.visible .key-service-card:nth-child(5) { transition-delay: 0.7s; }
+.our-story-key-services.visible .key-service-card:nth-child(1) {
+    transition-delay: 0.3s;
+}
+
+.our-story-key-services.visible .key-service-card:nth-child(2) {
+    transition-delay: 0.4s;
+}
+
+.our-story-key-services.visible .key-service-card:nth-child(3) {
+    transition-delay: 0.5s;
+}
+
+.our-story-key-services.visible .key-service-card:nth-child(4) {
+    transition-delay: 0.6s;
+}
+
+.our-story-key-services.visible .key-service-card:nth-child(5) {
+    transition-delay: 0.7s;
+}
 
 .our-story-key-services.visible .main-heading,
 .our-story-key-services.visible .key-service-card {
@@ -2034,7 +2221,7 @@ nav {
 }
 
 /* Animations for growth section */
-.growth-section.visible .growth-content > * {
+.growth-section.visible .growth-content>* {
     opacity: 0;
     transform: translateY(30px);
     transition: opacity 0.6s ease-out, transform 0.6s ease-out;
@@ -2055,7 +2242,7 @@ nav {
     transition-delay: 0.6s;
 }
 
-.growth-section.visible .growth-content > *,
+.growth-section.visible .growth-content>*,
 .growth-section.visible .application-form-wrapper {
     opacity: 1;
     transform: translateY(0);
@@ -2068,12 +2255,29 @@ nav {
     transition: opacity 0.4s ease-out, transform 0.4s ease-out;
 }
 
-.growth-section.visible .form-group:nth-child(1) { transition-delay: 0.7s; }
-.growth-section.visible .form-group:nth-child(2) { transition-delay: 0.75s; }
-.growth-section.visible .form-group:nth-child(3) { transition-delay: 0.8s; }
-.growth-section.visible .form-group:nth-child(4) { transition-delay: 0.85s; }
-.growth-section.visible .form-group:nth-child(5) { transition-delay: 0.9s; }
-.growth-section.visible .form-group:nth-child(6) { transition-delay: 0.95s; }
+.growth-section.visible .form-group:nth-child(1) {
+    transition-delay: 0.7s;
+}
+
+.growth-section.visible .form-group:nth-child(2) {
+    transition-delay: 0.75s;
+}
+
+.growth-section.visible .form-group:nth-child(3) {
+    transition-delay: 0.8s;
+}
+
+.growth-section.visible .form-group:nth-child(4) {
+    transition-delay: 0.85s;
+}
+
+.growth-section.visible .form-group:nth-child(5) {
+    transition-delay: 0.9s;
+}
+
+.growth-section.visible .form-group:nth-child(6) {
+    transition-delay: 0.95s;
+}
 
 .growth-section.visible .form-group {
     opacity: 1;
@@ -2114,19 +2318,33 @@ nav {
 }
 
 /* Staggered animation for contact info items */
-.contact-wrapper.visible .contact-info-text > * {
+.contact-wrapper.visible .contact-info-text>* {
     opacity: 0;
     transform: translateY(20px);
     transition: opacity 0.5s ease-out, transform 0.5s ease-out;
 }
 
-.contact-wrapper.visible .contact-phone-line:nth-child(1) { transition-delay: 0.6s; }
-.contact-wrapper.visible .contact-phone-line:nth-child(2) { transition-delay: 0.7s; }
-.contact-wrapper.visible .contact-email { transition-delay: 0.8s; }
-.contact-wrapper.visible .contact-hours { transition-delay: 0.9s; }
-.contact-wrapper.visible .contact-address { transition-delay: 1s; }
+.contact-wrapper.visible .contact-phone-line:nth-child(1) {
+    transition-delay: 0.6s;
+}
 
-.contact-wrapper.visible .contact-info-text > * {
+.contact-wrapper.visible .contact-phone-line:nth-child(2) {
+    transition-delay: 0.7s;
+}
+
+.contact-wrapper.visible .contact-email {
+    transition-delay: 0.8s;
+}
+
+.contact-wrapper.visible .contact-hours {
+    transition-delay: 0.9s;
+}
+
+.contact-wrapper.visible .contact-address {
+    transition-delay: 1s;
+}
+
+.contact-wrapper.visible .contact-info-text>* {
     opacity: 1;
     transform: translateY(0);
 }
@@ -2138,9 +2356,17 @@ nav {
     transition: opacity 0.5s ease-out, transform 0.5s ease-out;
 }
 
-.contact-wrapper.visible .contact-form-group:nth-child(1) { transition-delay: 0.6s; }
-.contact-wrapper.visible .contact-form-group:nth-child(2) { transition-delay: 0.7s; }
-.contact-wrapper.visible .contact-form-group:nth-child(3) { transition-delay: 0.8s; }
+.contact-wrapper.visible .contact-form-group:nth-child(1) {
+    transition-delay: 0.6s;
+}
+
+.contact-wrapper.visible .contact-form-group:nth-child(2) {
+    transition-delay: 0.7s;
+}
+
+.contact-wrapper.visible .contact-form-group:nth-child(3) {
+    transition-delay: 0.8s;
+}
 
 .contact-wrapper.visible .contact-form-group {
     opacity: 1;
@@ -2171,20 +2397,25 @@ nav {
     transform: translateY(-2px);
     transition: transform 0.3s ease-out;
 }
-.form-button-12{
+
+.form-button-12 {
     width: 100%;
     display: flex;
     justify-content: center;
 }
-.form-button-12-6{
+
+.form-button-12-6 {
     width: 100%;
 }
 
 /* Media Queries */
 @media screen and (max-width: 1600px) {
-    .key-service-card {
+
+    .key-service-card,
+    .our-story-card {
         flex: 0 0 calc(70% - 50px);
     }
+
     .primary-heading-text {
         font-size: 85px;
     }
@@ -2192,11 +2423,12 @@ nav {
     .descriptive-paragraph-text {
         font-size: 28px;
     }
-    .descriptive-paragraph-title p{
+
+    .descriptive-paragraph-title p {
         font-size: 28px;
     }
 
-    .career-hr-team{
+    .career-hr-team {
         width: 820px;
         left: 22rem;
         height: 21rem;
@@ -2206,18 +2438,27 @@ nav {
     .beige-bordered-card-container {
         padding: 50px 40px;
     }
-    .mre-hr-team{
+
+    .mre-hr-team {
         margin-bottom: -150px;
     }
-    .fms-industries-title{
+
+    .fms-industries-title {
         margin-left: 3rem;
     }
+
+    /* .consultation-btn-container {
+        left: -17rem;
+    } */
 }
 
 @media screen and (max-width: 1440px) {
-    .key-service-card {
+
+    .key-service-card,
+    .our-story-card {
         flex: 0 0 calc(65% - 50px);
     }
+
     .company-text-content {
         font-size: 26px;
     }
@@ -2243,7 +2484,8 @@ nav {
         max-width: -webkit-fill-available;
         gap: 35px;
     }
-    .fms-industries-title{
+
+    .fms-industries-title {
         margin-left: 3rem;
     }
 
@@ -2251,7 +2493,8 @@ nav {
         padding: 20px 14px;
         min-height: 350px;
     }
-    .career-testimonial-box{
+
+    .career-testimonial-box {
         padding: 24px 20px;
         max-height: 450px;
     }
@@ -2268,37 +2511,59 @@ nav {
     .growth-title {
         font-size: 80px;
     }
+
+    /* .consultation-btn-container {
+        left: 4rem;
+    } */
 }
 
 @media (max-width: 1200px) {
+
+    /* .consultation-btn-container {
+        left: 4rem;
+    } */
+
     /*.left-content{*/
     /*    padding-left: 3rem;*/
     /*}*/
-    .key-service-card {
+    .key-service-card,
+    .our-story-card {
         flex: 0 0 calc(60% - 50px);
     }
-    .main-info-box::before, .main-info-box::after {
+
+    .carousel-nav-arrows {
         display: none;
     }
-    .sub-info-box::before, .sub-info-box::after {
+
+    .main-info-box::before,
+    .main-info-box::after {
         display: none;
     }
-    .sub-info-box{
+
+    .sub-info-box::before,
+    .sub-info-box::after {
+        display: none;
+    }
+
+    .sub-info-box {
         /*left: 14rem;*/
         display: contents;
         text-align: -webkit-center;
         bottom: 1rem;
     }
-    .sub-info-box h3{
+
+    .sub-info-box h3 {
         left: 0rem;
         padding-bottom: 1rem;
     }
+
     .info-card-wrapper,
     .mission-card-wrapper,
     .vision-card-wrapper,
-    .values-card-wrapper{
+    .values-card-wrapper {
         margin-left: 15%;
     }
+
     .hero {
         gap: 3rem;
         padding: 3rem 4%;
@@ -2316,15 +2581,17 @@ nav {
         font-size: 24px;
         line-height: 145%;
     }
-    .descriptive-paragraph-title p{
+
+    .descriptive-paragraph-title p {
         font-size: 24px;
     }
 
-    .beige-bordered-card-container::before, .beige-bordered-card-container::after{
+    .beige-bordered-card-container::before,
+    .beige-bordered-card-container::after {
         display: none;
     }
 
-    .career-hr-team{
+    .career-hr-team {
         width: 810px;
         left: 0;
         height: 18rem;
@@ -2334,7 +2601,8 @@ nav {
     .beige-bordered-card-container {
         padding: 45px 35px;
     }
-    .mre-hr-team{
+
+    .mre-hr-team {
         margin-bottom: 0px;
     }
 
@@ -2351,7 +2619,8 @@ nav {
         padding: 20px 14px;
         min-height: 320px;
     }
-    .career-testimonial-box{
+
+    .career-testimonial-box {
         padding: 24px 20px;
         max-height: 450px;
     }
@@ -2420,34 +2689,48 @@ nav {
 }
 
 @media (max-width: 1024px) {
+
+    /* .consultation-btn-container {
+        left: 4rem;
+    } */
+
     /*.left-content{*/
     /*    padding-left: 3rem;*/
     /*}*/
-    .key-service-card {
+    .key-service-card,
+    .our-story-card {
         flex: 0 0 calc(60% - 50px);
     }
-    .main-info-box::before, .main-info-box::after {
+
+    .main-info-box::before,
+    .main-info-box::after {
         display: none;
     }
-    .sub-info-box::before, .sub-info-box::after {
+
+    .sub-info-box::before,
+    .sub-info-box::after {
         display: none;
     }
-    .sub-info-box{
+
+    .sub-info-box {
         /*left: 14rem;*/
         display: contents;
         text-align: -webkit-center;
         bottom: 1rem;
     }
-    .sub-info-box h3{
+
+    .sub-info-box h3 {
         left: 0rem;
         padding-bottom: 1rem;
     }
+
     .info-card-wrapper,
     .mission-card-wrapper,
     .vision-card-wrapper,
-    .values-card-wrapper{
+    .values-card-wrapper {
         margin-left: 15%;
     }
+
     .mre-logo-wrapper {
         position: static;
         margin: 0 auto 40px;
@@ -2540,15 +2823,17 @@ nav {
     .descriptive-paragraph-text {
         font-size: 22px;
     }
-    .descriptive-paragraph-title p{
+
+    .descriptive-paragraph-title p {
         font-size: 22px;
     }
 
-    .beige-bordered-card-container::before, .beige-bordered-card-container::after{
+    .beige-bordered-card-container::before,
+    .beige-bordered-card-container::after {
         display: none;
     }
 
-    .career-hr-team{
+    .career-hr-team {
         width: 700px;
         left: 0;
         height: 17rem;
@@ -2558,7 +2843,8 @@ nav {
     .beige-bordered-card-container {
         padding: 40px 30px;
     }
-    .mre-hr-team{
+
+    .mre-hr-team {
         margin-bottom: 0px;
     }
 
@@ -2641,7 +2927,8 @@ nav {
         margin: 2rem 0;
     }
 
-    .contact-form-wrapper::before, .contact-form-wrapper::after {
+    .contact-form-wrapper::before,
+    .contact-form-wrapper::after {
         display: none;
     }
 }
@@ -2661,18 +2948,26 @@ nav {
 }
 
 @media (max-width: 968px) {
+
+    /* .consultation-btn-container {
+        left: 4rem;
+    } */
+
     /*.left-content{*/
     /*    padding-left: 3rem;*/
     /*}*/
-    .key-service-card {
+    .key-service-card,
+    .our-story-card {
         flex: 0 0 calc(60% - 50px);
     }
+
     .info-card-wrapper,
     .mission-card-wrapper,
     .vision-card-wrapper,
-    .values-card-wrapper{
+    .values-card-wrapper {
         margin-left: 15%;
     }
+
     .menu-toggle {
         display: flex;
     }
@@ -2780,24 +3075,29 @@ nav {
         padding-left: 0px;
     }
 
-    .services-intro::before, .services-intro::after {
+    .services-intro::before,
+    .services-intro::after {
         display: none;
     }
 
-    .main-info-box::before, .main-info-box::after {
-        display: none;
-    }
-    .sub-info-box::before, .sub-info-box::after {
+    .main-info-box::before,
+    .main-info-box::after {
         display: none;
     }
 
-    .sub-info-box{
+    .sub-info-box::before,
+    .sub-info-box::after {
+        display: none;
+    }
+
+    .sub-info-box {
         /*left: 10rem;*/
         display: contents;
         text-align: -webkit-center;
         bottom: 1rem;
     }
-    .sub-info-box h3{
+
+    .sub-info-box h3 {
         left: 0rem;
         padding-bottom: 1rem;
     }
@@ -2854,36 +3154,49 @@ nav {
 }
 
 @media (max-width: 768px) {
+    /* .consultation-btn-container {
+        left: 4rem;
+    } */
+
     /*.left-content{*/
     /*    padding-left: 3rem;*/
     /*}*/
     .info-card-wrapper,
     .mission-card-wrapper,
     .vision-card-wrapper,
-    .values-card-wrapper{
+    .values-card-wrapper {
         margin-left: 15%;
     }
-    .main-info-box::before, .main-info-box::after {
+
+    .main-info-box::before,
+    .main-info-box::after {
         display: none;
     }
-    .sub-info-box::before, .sub-info-box::after {
+
+    .sub-info-box::before,
+    .sub-info-box::after {
         display: none;
     }
-    .sub-info-box{
+
+    .sub-info-box {
         /*left: 14rem;*/
         display: contents;
         text-align: -webkit-center;
         bottom: 1rem;
     }
-    .sub-info-box h3{
+
+    .sub-info-box h3 {
         left: 0rem;
         padding-bottom: 1rem;
     }
-    .key-service-card {
+
+    .key-service-card,
+    .our-story-card {
         min-width: fit-content;
         min-height: auto;
         flex: 0 0 calc(60% - 50px);
     }
+
     .key-service-card.active {
         transform: unset;
         flex: unset;
@@ -2983,15 +3296,17 @@ nav {
         font-size: 20px;
         line-height: 140%;
     }
-    .descriptive-paragraph-title p{
+
+    .descriptive-paragraph-title p {
         font-size: 20px;
     }
 
-    .beige-bordered-card-container::before, .beige-bordered-card-container::after{
+    .beige-bordered-card-container::before,
+    .beige-bordered-card-container::after {
         display: none;
     }
 
-    .career-hr-team{
+    .career-hr-team {
         width: 560px;
         left: 0;
         height: 15rem;
@@ -3002,7 +3317,8 @@ nav {
         padding: 35px 25px;
         border-radius: 10px;
     }
-    .mre-hr-team{
+
+    .mre-hr-team {
         margin-bottom: 0px;
     }
 
@@ -3100,7 +3416,7 @@ nav {
 }
 
 @media (min-width: 768px) {
-    .form-button-12-6{
+    .form-button-12-6 {
         width: 50%;
     }
 
@@ -3128,41 +3444,55 @@ nav {
 }
 
 @media (max-width: 640px) {
+    /* .consultation-btn-container {
+        left: 4rem;
+    } */
+
     /*.left-content{*/
     /*    padding-left: 0rem;*/
     /*}*/
     .info-card-wrapper,
     .mission-card-wrapper,
     .vision-card-wrapper,
-    .values-card-wrapper{
+    .values-card-wrapper {
         margin-left: 15%;
     }
-    .main-info-box::before, .main-info-box::after {
+
+    .main-info-box::before,
+    .main-info-box::after {
         display: none;
     }
-    .sub-info-box::before, .sub-info-box::after {
+
+    .sub-info-box::before,
+    .sub-info-box::after {
         display: none;
     }
-    .sub-info-box{
+
+    .sub-info-box {
         /*left: 14rem;*/
         display: contents;
         text-align: -webkit-center;
         bottom: 1rem;
     }
-    .sub-info-box h3{
+
+    .sub-info-box h3 {
         left: 0rem;
         padding-bottom: 1rem;
     }
-    .key-service-card {
+
+    .key-service-card,
+    .our-story-card {
         min-width: fit-content;
         min-height: auto;
         flex: 0 0 calc(60% - 50px);
     }
+
     .key-service-card.active {
         transform: unset;
         flex: unset;
     }
-    .mre-adv-card{
+
+    .mre-adv-card {
         padding: 30px 30px;
     }
 
@@ -3248,15 +3578,17 @@ nav {
     .descriptive-paragraph-text {
         font-size: 18px;
     }
-    .descriptive-paragraph-title p{
+
+    .descriptive-paragraph-title p {
         font-size: 18px;
     }
 
-    .beige-bordered-card-container::before, .beige-bordered-card-container::after{
+    .beige-bordered-card-container::before,
+    .beige-bordered-card-container::after {
         display: none;
     }
 
-    .career-hr-team{
+    .career-hr-team {
         width: -webkit-fill-available;
         left: 0;
         height: 15rem;
@@ -3266,7 +3598,8 @@ nav {
     .beige-bordered-card-container {
         padding: 30px 20px;
     }
-    .mre-hr-team{
+
+    .mre-hr-team {
         margin-bottom: 0px;
     }
 
@@ -3295,41 +3628,55 @@ nav {
 }
 
 @media (max-width: 480px) {
+    /* .consultation-btn-container {
+        left: 4rem;
+    } */
+
     /*.left-content{*/
     /*    padding-left: 0rem;*/
     /*}*/
     .info-card-wrapper,
     .mission-card-wrapper,
     .vision-card-wrapper,
-    .values-card-wrapper{
+    .values-card-wrapper {
         margin-left: 15%;
     }
-    .main-info-box::before, .main-info-box::after {
+
+    .main-info-box::before,
+    .main-info-box::after {
         display: none;
     }
-    .sub-info-box::before, .sub-info-box::after {
+
+    .sub-info-box::before,
+    .sub-info-box::after {
         display: none;
     }
-    .sub-info-box{
+
+    .sub-info-box {
         /*left: 14rem;*/
         display: contents;
         text-align: -webkit-center;
         bottom: 1rem;
     }
-    .sub-info-box h3{
+
+    .sub-info-box h3 {
         left: 0rem;
         padding-bottom: 1rem;
     }
-    .key-service-card {
+
+    .key-service-card,
+    .our-story-card {
         min-width: fit-content;
         min-height: auto;
         flex: 0 0 calc(60% - 50px);
     }
+
     .key-service-card.active {
         transform: unset;
         flex: unset;
     }
-    .mre-adv-card{
+
+    .mre-adv-card {
         padding: 30px 30px;
     }
 
@@ -3448,15 +3795,17 @@ nav {
         font-size: 16px;
         line-height: 135%;
     }
-    .descriptive-paragraph-title p{
+
+    .descriptive-paragraph-title p {
         font-size: 16px;
     }
 
-    .beige-bordered-card-container::before, .beige-bordered-card-container::after{
+    .beige-bordered-card-container::before,
+    .beige-bordered-card-container::after {
         display: none;
     }
 
-    .career-hr-team{
+    .career-hr-team {
         width: -webkit-fill-available;
         left: 0;
         height: 15rem;
@@ -3468,7 +3817,8 @@ nav {
         border-radius: 8px;
         border-width: 2px;
     }
-    .mre-hr-team{
+
+    .mre-hr-team {
         margin-bottom: 0px;
     }
 
@@ -3552,41 +3902,55 @@ nav {
 }
 
 @media (max-width: 375px) {
+    /* .consultation-btn-container {
+        left: 4rem;
+    } */
+
     /*.left-content{*/
     /*    padding-left: 0rem;*/
     /*}*/
     .info-card-wrapper,
     .mission-card-wrapper,
     .vision-card-wrapper,
-    .values-card-wrapper{
+    .values-card-wrapper {
         margin-left: 15%;
     }
-    .main-info-box::before, .main-info-box::after {
+
+    .main-info-box::before,
+    .main-info-box::after {
         display: none;
     }
-    .sub-info-box::before, .sub-info-box::after {
+
+    .sub-info-box::before,
+    .sub-info-box::after {
         display: none;
     }
-    .sub-info-box{
+
+    .sub-info-box {
         /*left: 14rem;*/
         display: contents;
         text-align: -webkit-center;
         bottom: 1rem;
     }
-    .sub-info-box h3{
+
+    .sub-info-box h3 {
         left: 0rem;
         padding-bottom: 1rem;
     }
-    .key-service-card {
+
+    .key-service-card,
+    .our-story-card {
         min-width: fit-content;
         min-height: auto;
         flex: 0 0 calc(60% - 50px);
     }
+
     .key-service-card.active {
         transform: unset;
         flex: unset;
     }
-    .mre-adv-card{
+
+    .mre-adv-card {
         padding: 30px 30px;
     }
 
@@ -3639,18 +4003,21 @@ nav {
     .descriptive-paragraph-text {
         font-size: 14px;
     }
-    .descriptive-paragraph-title p{
+
+    .descriptive-paragraph-title p {
         font-size: 14px;
     }
 
-    .beige-bordered-card-container::before, .beige-bordered-card-container::after{
+    .beige-bordered-card-container::before,
+    .beige-bordered-card-container::after {
         display: none;
     }
-    .mre-hr-team{
+
+    .mre-hr-team {
         margin-bottom: 0px;
     }
 
-    .career-hr-team{
+    .career-hr-team {
         width: -webkit-fill-available;
         left: 0;
         height: 15rem;
@@ -3702,6 +4069,7 @@ nav {
         opacity: 0;
         transform: translateX(-30px);
     }
+
     to {
         opacity: 1;
         transform: translateX(0);
@@ -3713,6 +4081,7 @@ nav {
         opacity: 0;
         transform: translateX(30px);
     }
+
     to {
         opacity: 1;
         transform: translateX(0);
@@ -3725,4 +4094,15 @@ nav {
 
 .animate-slide-right {
     animation: slideInRight 0.6s ease-out;
+}
+
+.consultation-btn {
+    background: var(--secondary-green);
+    border-radius: 10px;
+    border: none;
+    color: var(--white);
+    padding: 0.5rem 1rem;
+    font-size: 20px;
+    cursor: pointer;
+    position: relative;
 }

@@ -18,7 +18,7 @@
             <div class="mre-cta-column">
                 <h2 class="mre-cta-heading">Interested?</h2>
                 <div class="mre-cta-content">
-                    <a href="#book-consultation" class="mre-cta-link">Book A Consultation With Us Today</a>
+                    <a href="{{route('contact')}}" class="mre-cta-link">Book A Consultation With Us Today</a>
                 </div>
             </div>
 

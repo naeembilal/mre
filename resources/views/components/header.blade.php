@@ -36,7 +36,7 @@
         </li>
         <li>
             <a class="{{request()->route()->getName() === 'careers' ? 'active' : ''}}" href="/careers">
-                Careers
+                Your Story
             </a>
         </li>
         <li>

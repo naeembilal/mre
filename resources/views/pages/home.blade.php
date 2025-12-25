@@ -99,7 +99,24 @@
                         confident successes.</p>
                 </div>
 
-                <div class="carousel-container">
+                <div id="keyServicesStatic">
+                    @include('pages.home_key_services_section')
+                </div>
+
+                <div id="keyServicesCarousel" class="carousel-container">
+                    <!-- Carousel Navigation Arrows -->
+                    <div class="carousel-nav-arrows">
+                        <button id="prevBtn" class="carousel-nav-btn" aria-label="Previous slide">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <polyline points="15 18 9 12 15 6"></polyline>
+                            </svg>
+                        </button>
+                        <button id="nextBtn" class="carousel-nav-btn" aria-label="Next slide">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <polyline points="9 18 15 12 9 6"></polyline>
+                            </svg>
+                        </button>
+                    </div>
                     <div class="carousel-wrapper" id="carouselWrapper">
                         <!-- Card 1: Business Consultancy -->
                         <div class="key-service-card">
@@ -118,6 +135,11 @@
                                     deliver actionable, strategic recommendations. We facilitate smooth transformations
                                     and significant efficiency improvements to achieve tangible growth.
                                 </p>
+                                <div class="consultation-btn-container">
+                                    <button type="button" class="consultation-btn"
+                                     onclick="window.location.href='{{route('contact')}}'">
+                                     Request A Consultation</button>
+                                </div>
                             </div>
                             <a href="javascript:void(0);" class="learn-more">
                                 Learn More
@@ -143,6 +165,11 @@
                                     manager communication (alerts/exceptions). We also manage approval workflows and
                                     complex dispatch generation to deliver full efficiency end-to-end.
                                 </p>
+                                <div class="consultation-btn-container">
+                                    <button type="button" class="consultation-btn"
+                                     onclick="window.location.href='{{route('contact')}}'">
+                                     Request A Consultation</button>
+                                </div>
                             </div>
                             <a href="javascript:void(0);" class="learn-more">
                                 Learn More
@@ -168,6 +195,11 @@
                                     culture and drive results. We take care of all the people logistics so your team can
                                     focus on achieving more and accelerating business growth.
                                 </p>
+                                <div class="consultation-btn-container">
+                                    <button type="button" class="consultation-btn"
+                                     onclick="window.location.href='{{route('contact')}}'">
+                                     Request A Consultation</button>
+                                </div>
                             </div>
                             <a href="javascript:void(0);" class="learn-more">
                                 Learn More
@@ -192,6 +224,11 @@
                                     expertise to streamline project delivery. Achieve faster, risk-managed delivery and
                                     successfully execute complex technology roadmaps on time and within scope.
                                 </p>
+                                <div class="consultation-btn-container">
+                                    <button type="button" class="consultation-btn"
+                                     onclick="window.location.href='{{route('contact')}}'">
+                                     Request A Consultation</button>
+                                </div>
                             </div>
                             <a href="javascript:void(0);" class="learn-more">
                                 Learn More
@@ -227,6 +264,11 @@
                                     optimization. This includes process automation and end-to-end digital transformation,
                                     ensuring optimized IT operations and the agility to scale your business.
                                 </p>
+                                <div class="consultation-btn-container">
+                                    <button type="button" class="consultation-btn"
+                                     onclick="window.location.href='{{route('contact')}}'">
+                                     Request A Consultation</button>
+                                </div>
                             </div>
                             <a href="javascript:void(0);" class="learn-more">
                                 Learn More

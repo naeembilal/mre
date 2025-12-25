@@ -163,9 +163,22 @@
                 </div>
 
                 <div class="carousel-container">
+                    <!-- Carousel Navigation Arrows -->
+                    <div class="carousel-nav-arrows">
+                        <button id="prevBtn" class="carousel-nav-btn" aria-label="Previous slide">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <polyline points="15 18 9 12 15 6"></polyline>
+                            </svg>
+                        </button>
+                        <button id="nextBtn" class="carousel-nav-btn" aria-label="Next slide">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <polyline points="9 18 15 12 9 6"></polyline>
+                            </svg>
+                        </button>
+                    </div>
                     <div class="carousel-wrapper" id="carouselWrapper">
                         <!-- Card 1: Business Consultancy -->
-                        <div class="key-service-card mre-adv-card">
+                        <div class="our-story-card mre-adv-card">
                             <div class="card-content">
                                 <h3 class="mre-card-heading">We’ve Got Your Back</h3>
                                 <p class="mre-card-description">
@@ -177,7 +190,7 @@
                         </div>
 
                         <!-- Card 2: Operations Management -->
-                        <div class="key-service-card mre-adv-card">
+                        <div class="our-story-card mre-adv-card">
                             <div class="card-content">
                                 <h3 class="mre-card-heading">Talent Without Borders</h3>
                                 <p class="mre-card-description">
@@ -189,7 +202,7 @@
                         </div>
 
                         <!-- Card 3: HR & Talent Solutions -->
-                        <div class="key-service-card mre-adv-card">
+                        <div class="our-story-card mre-adv-card">
                             <div class="card-content">
                                 <h3 class="mre-card-heading">Automation Made Easy</h3>
                                 <p class="mre-card-description">
@@ -201,7 +214,7 @@
                         </div>
 
                         <!-- Card 4: Project Management -->
-                        <div class="key-service-card mre-adv-card">
+                        <div class="our-story-card mre-adv-card">
                             <div class="card-content">
                                 <h3 class="mre-card-heading">SDGs & vision 2030</h3>
                                 <p class="mre-card-description">
