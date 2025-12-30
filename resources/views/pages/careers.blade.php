@@ -33,30 +33,35 @@
             <div class="polaroid-cluster-group polaroid-cluster-left">
                 <div class="polaroid-photo-card">
                     <div class="polaroid-image-wrapper">
-                        <img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=400"
-                             alt="Team member with car">
+                        <img src="{{asset('images/your_story/1.png')}}" alt="1.png">
+{{--                        <img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=400"--}}
+{{--                             alt="Team member with car">--}}
                     </div>
                 </div>
                 <div class="polaroid-photo-card">
                     <div class="polaroid-image-wrapper">
-                        <img src="https://images.unsplash.com/photo-1539571696357-5a69c17a67c6?w=400"
-                             alt="Team member outdoors">
+                        <img src="{{asset('images/your_story/2.png')}}" alt="2.png">
+{{--                        <img src="https://images.unsplash.com/photo-1539571696357-5a69c17a67c6?w=400"--}}
+{{--                             alt="Team member outdoors">--}}
                     </div>
                 </div>
                 <div class="polaroid-photo-card">
                     <div class="polaroid-image-wrapper">
-                        <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=400" alt="Palm trees">
+                        <img src="{{asset('images/your_story/3.png')}}" alt="3.png">
+{{--                        <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=400" alt="Palm trees">--}}
                     </div>
                 </div>
                 <div class="polaroid-photo-card">
                     <div class="polaroid-image-wrapper">
-                        <img src="https://images.unsplash.com/photo-1502877338535-766e1452684a?w=400" alt="Vintage car">
+                        <img src="{{asset('images/your_story/4.png')}}" alt="4.png">
+{{--                        <img src="https://images.unsplash.com/photo-1502877338535-766e1452684a?w=400" alt="Vintage car">--}}
                     </div>
                 </div>
                 <div class="polaroid-photo-card">
                     <div class="polaroid-image-wrapper">
-                        <img src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?w=400"
-                             alt="Team member happy">
+                        <img src="{{asset('images/your_story/5.png')}}" alt="5.png">
+{{--                        <img src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?w=400"--}}
+{{--                             alt="Team member happy">--}}
                     </div>
                 </div>
             </div>
@@ -65,32 +70,37 @@
             <div class="polaroid-cluster-group polaroid-cluster-right">
                 <div class="polaroid-photo-card">
                     <div class="polaroid-image-wrapper">
-                        <img src="https://images.unsplash.com/photo-1488426862026-3ee34a7d66df?w=400"
-                             alt="Team member relaxing">
+                        <img src="{{asset('images/your_story/6.png')}}" alt="6.png">
+{{--                        <img src="https://images.unsplash.com/photo-1488426862026-3ee34a7d66df?w=400"--}}
+{{--                             alt="Team member relaxing">--}}
                     </div>
                 </div>
                 <div class="polaroid-photo-card">
                     <div class="polaroid-image-wrapper">
-                        <img src="https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e?w=400"
-                             alt="Team member casual">
+                        <img src="{{asset('images/your_story/7.png')}}" alt="7.png">
+{{--                        <img src="https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e?w=400"--}}
+{{--                             alt="Team member casual">--}}
                     </div>
                 </div>
                 <div class="polaroid-photo-card">
                     <div class="polaroid-image-wrapper">
-                        <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=400"
-                             alt="Nature scene">
+                        <img src="{{asset('images/your_story/8.png')}}" alt="8.png">
+{{--                        <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=400"--}}
+{{--                             alt="Nature scene">--}}
                     </div>
                 </div>
                 <div class="polaroid-photo-card">
                     <div class="polaroid-image-wrapper">
-                        <img src="https://images.unsplash.com/photo-1517677129300-07b130802f46?w=400"
-                             alt="Vintage item">
+                        <img src="{{asset('images/your_story/9.png')}}" alt="9.png">
+{{--                        <img src="https://images.unsplash.com/photo-1517677129300-07b130802f46?w=400"--}}
+{{--                             alt="Vintage item">--}}
                     </div>
                 </div>
                 <div class="polaroid-photo-card">
                     <div class="polaroid-image-wrapper">
-                        <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=400"
-                             alt="Team member portrait">
+                        <img src="{{asset('images/your_story/10.png')}}" alt="10.png">
+{{--                        <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=400"--}}
+{{--                             alt="Team member portrait">--}}
                     </div>
                 </div>
             </div>
