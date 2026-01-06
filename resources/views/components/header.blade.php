@@ -15,6 +15,38 @@
         box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
         /*padding: 10px 30px;*/
     }
+
+    .certification-badge {
+        display: flex;
+        align-items: center;
+        height: 100%;
+        margin-top: 1rem;
+    }
+
+    .certification-badge img {
+        height: 125px;
+        width: auto;
+        object-fit: contain;
+    }
+
+    nav{
+        height: 106px;
+    }
+
+    @media (max-width: 968px) {
+        .certification-badge {
+            margin-top: 0rem;
+        }
+        .certification-badge img {
+            height: 90px;
+        }
+        nav{
+            height: 90px;
+        }
+    }
+    .nav-links{
+        margin-right: 3rem;
+    }
 </style>
 
 <nav>
@@ -46,6 +78,10 @@
         </li>
 {{--        <li><a href="#" class="cta-button mobile-cta-button">Go To FMS</a></li>--}}
     </ul>
+
+    <div class="certification-badge">
+        <img src="{{asset('images/MRE_BH_English_2025_Certification_Badge.png')}}" alt="Great Place To Work Certified">
+    </div>
 
 {{--    <a href="#" class="cta-button">Go To FMS</a>--}}
 

@@ -469,12 +469,12 @@ nav {
 
 .key-service-card,
 .our-story-card {
-    min-height: 570px;
+    min-height: 600px;
     flex: 0 0 calc(50% - 50px);
     background: rgba(232, 223, 217, 0.5);
     border: 2px solid var(--secondary-green);
     border-radius: 12px;
-    padding: 60px;
+    padding: 50px 60px 130px 60px;
     /*min-height: auto;*/
     display: flex;
     flex-direction: column;
@@ -1594,7 +1594,8 @@ nav {
 
 .polaroid-gallery-container {
     width: 100%;
-    max-width: 1728px;
+    max-width: 2200px;
+    /* max-width: 1728px; */
     margin: 0 auto;
     position: relative;
     min-height: 800px;
@@ -1650,12 +1651,13 @@ nav {
 
 .polaroid-photo-card {
     background: var(--white);
-    padding: 6px 0px 15px 0px;
+    padding: 6px 0px 20px 0px;
     /*padding: 15px 15px 50px 15px;*/
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
     border-radius: 2px;
     transition: all 0.3s ease;
-    width: 220px;
+    width: 300px;
+    /* width: 220px; */
     position: relative;
     z-index: 5;
 }
@@ -1798,6 +1800,18 @@ nav {
 .form-textarea:focus {
     outline: none;
     box-shadow: 0 0 0 2px var(--secondary-green);
+}
+
+.form-select {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%23243F5D' d='M6 9L1 4h10z'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 1rem center;
+    background-size: 12px;
+    padding-right: 2.5rem;
+    cursor: pointer;
 }
 
 .form-textarea {
@@ -2409,8 +2423,31 @@ nav {
     width: 100%;
 }
 
+.your-story-svg {
+    height: 90%;
+}
+
 /* Media Queries */
+@media screen and (max-width: 2000px) {
+    .polaroid-photo-card {
+        width: 220px;
+        padding: 8px 5px 15px 5px;
+    }
+
+    .polaroid-gallery-container {
+        max-width: 1728px;
+    }
+
+    .your-story-svg {
+        height: 70%;
+    }
+}
+
 @media screen and (max-width: 1600px) {
+
+    .your-story-svg {
+        height: 70%;
+    }
 
     .key-service-card,
     .our-story-card {
@@ -2448,12 +2485,24 @@ nav {
         margin-left: 3rem;
     }
 
+    .polaroid-photo-card {
+        width: 180px;
+        padding: 1px 5px 15px 5px;
+    }
+
+    .polaroid-gallery-container {
+        max-width: 1728px;
+    }
+
     /* .consultation-btn-container {
         left: -17rem;
     } */
 }
 
 @media screen and (max-width: 1440px) {
+    .your-story-svg {
+        height: 60%;
+    }
 
     .key-service-card,
     .our-story-card {
@@ -2506,7 +2555,12 @@ nav {
     }
 
     .polaroid-photo-card {
-        width: 200px;
+        width: 180px;
+        padding: 1px 5px 15px 5px;
+    }
+
+    .polaroid-gallery-container {
+        max-width: 1728px;
     }
 
     .growth-title {
@@ -2519,6 +2573,9 @@ nav {
 }
 
 @media (max-width: 1200px) {
+    .your-story-svg {
+        height: 50%;
+    }
 
     /* .consultation-btn-container {
         left: 4rem;
@@ -2640,6 +2697,11 @@ nav {
 
     .polaroid-photo-card {
         width: 180px;
+        padding: 6px 0px 15px 0px;
+    }
+
+    .polaroid-gallery-container {
+        max-width: 1728px;
     }
 
     .polaroid-image-wrapper {
@@ -2690,6 +2752,9 @@ nav {
 }
 
 @media (max-width: 1024px) {
+    .your-story-svg {
+        height: 50%;
+    }
 
     /* .consultation-btn-container {
         left: 4rem;
@@ -2888,6 +2953,11 @@ nav {
 
     .polaroid-photo-card {
         width: 160px;
+        padding: 6px 0px 15px 0px;
+    }
+
+    .polaroid-gallery-container {
+        max-width: 1728px;
     }
 
     .polaroid-image-wrapper {
@@ -2948,7 +3018,31 @@ nav {
     }
 }
 
+/* Desktop: Position badge below header */
+@media (min-width: 969px) {
+    nav {
+        position: relative;
+    }
+
+    /* .certification-badge {
+        position: absolute;
+        right: 5%;
+        top: 100%;
+        margin-top: 0.5rem;
+        height: auto;
+    } */
+
+    .certification-badge img {
+        height: 80px;
+        width: auto;
+        object-fit: contain;
+    }
+}
+
 @media (max-width: 968px) {
+    .your-story-svg {
+        height: 50%;
+    }
 
     /* .consultation-btn-container {
         left: 4rem;
@@ -2969,8 +3063,34 @@ nav {
         margin-left: 15%;
     }
 
+    nav {
+        justify-content: flex-start;
+        position: relative;
+    }
+
+    .nav-links {
+        position: fixed;
+    }
+
+    /* Group toggle and badge together on the right */
     .menu-toggle {
         display: flex;
+        margin-left: auto;
+        margin-right: 0.25rem;
+    }
+
+    .certification-badge {
+        display: flex !important;
+        /* margin-top: 0; */
+        height: auto;
+        /* margin-left: 0; */
+        /* margin-right: 0; */
+    }
+
+    .certification-badge img {
+        height: 50px;
+        width: auto;
+        object-fit: contain;
     }
 
     .nav-links {
@@ -3155,6 +3275,10 @@ nav {
 }
 
 @media (max-width: 768px) {
+    .your-story-svg {
+        height: 50%;
+    }
+
     /* .consultation-btn-container {
         left: 4rem;
     } */
@@ -3372,6 +3496,7 @@ nav {
 
     .polaroid-photo-card {
         width: 140px;
+        padding: 6px 0px 15px 0px;
     }
 
     .polaroid-image-wrapper {
@@ -3380,6 +3505,10 @@ nav {
 
     .polaroid-photo-card:nth-child(n) {
         transform: rotate(0deg) !important;
+    }
+
+    .polaroid-gallery-container {
+        max-width: 1728px;
     }
 
     .decorative-wave-pattern {
@@ -3445,6 +3574,10 @@ nav {
 }
 
 @media (max-width: 640px) {
+    .your-story-svg {
+        height: 50%;
+    }
+
     /* .consultation-btn-container {
         left: 4rem;
     } */
@@ -3498,12 +3631,12 @@ nav {
     }
 
     nav {
-        padding: 1.5rem 5%;
+        padding: 1.0rem 5%;
     }
 
-    .logo {
-        width: 60px;
-        height: 60px;
+    .logo>a>img {
+        width: auto;
+        height: 50px;
     }
 
     .header-logo {
@@ -3624,12 +3757,20 @@ nav {
         /*padding: 12px 12px 40px 12px;*/
     }
 
+    .polaroid-gallery-container {
+        max-width: 1728px;
+    }
+
     .polaroid-image-wrapper {
         height: 150px;
     }
 }
 
 @media (max-width: 480px) {
+    .your-story-svg {
+        height: 50%;
+    }
+
     /* .consultation-btn-container {
         left: 4rem;
     } */
@@ -3876,6 +4017,10 @@ nav {
         /*padding: 10px 10px 35px 10px;*/
     }
 
+    .polaroid-gallery-container {
+        max-width: 1728px;
+    }
+
     .polaroid-image-wrapper {
         height: 130px;
     }
@@ -3905,6 +4050,10 @@ nav {
 }
 
 @media (max-width: 375px) {
+    .your-story-svg {
+        height: 50%;
+    }
+
     /* .consultation-btn-container {
         left: 4rem;
     } */
@@ -4048,6 +4197,11 @@ nav {
 
     .polaroid-photo-card {
         width: 100px;
+        padding: 6px 0px 15px 0px;
+    }
+
+    .polaroid-gallery-container {
+        max-width: 1728px;
     }
 
     .polaroid-image-wrapper {

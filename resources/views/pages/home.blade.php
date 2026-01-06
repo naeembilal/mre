@@ -21,7 +21,7 @@
                 <div class="stat-label">Clients</div>
             </div>
             <div class="stat-item">
-                <div class="stat-number">2K+</div>
+                <div class="stat-number">4K+</div>
                 <div class="stat-label">People Managed</div>
             </div>
             <div class="stat-item">
