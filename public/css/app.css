@@ -1072,6 +1072,12 @@ nav {
     gap: 0;
 }
 
+.mre-contact-info p {
+    color: var(--primary-blue);
+    text-decoration: none;
+    -webkit-tap-highlight-color: transparent;
+}
+
 /* Logo Section */
 .mre-logo-wrapper {
     position: absolute;
@@ -1278,6 +1284,7 @@ nav {
     position: relative;
     left: 2rem;
     font-weight: 500;
+    font-size: 1.17em;
 }
 
 .sub-info-box::before {
@@ -1912,6 +1919,12 @@ nav {
 .contact-hours,
 .contact-address {
     display: block;
+}
+
+.contact-phone-line {
+    color: var(--bg-cream);
+    text-decoration: none;
+    -webkit-tap-highlight-color: transparent;
 }
 
 .contact-email {
@@ -3076,7 +3089,6 @@ nav {
     .menu-toggle {
         display: flex;
         margin-left: auto;
-        margin-right: 0.25rem;
     }
 
     .certification-badge {

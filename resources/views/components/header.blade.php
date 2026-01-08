@@ -6,14 +6,25 @@
         z-index: 999;
         background: #fff;
         box-shadow: none;
-        /*transition: all 0.3s ease;*/
+        position: relative;
+        transform: translateY(0);
+        transition: transform 0.4s ease, box-shadow 0.3s ease;
+        will-change: transform, box-shadow;
         /*padding: 15px 30px;*/
     }
 
     nav.scrolled {
         position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
         box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        transform: translateY(0);
         /*padding: 10px 30px;*/
+    }
+
+    nav.is-hidden {
+        /* transform: translateY(-120%); */
     }
 
     .certification-badge {
@@ -32,7 +43,9 @@
     nav{
         height: 106px;
     }
-
+    .nav-links{
+        margin-right: 3rem;
+    }
     @media (max-width: 968px) {
         .certification-badge {
             margin-top: 0rem;
@@ -43,9 +56,9 @@
         nav{
             height: 90px;
         }
-    }
-    .nav-links{
-        margin-right: 3rem;
+        .nav-links{
+            margin-right: 0rem;
+        }
     }
 </style>
 

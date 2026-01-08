@@ -19,9 +19,29 @@ document.addEventListener('DOMContentLoaded', function() {
         serviceCards.forEach(card => card.classList.remove('active'));
     });
 
+    const navBar = document.querySelector('nav');
     const menuToggle = document.getElementById('menuToggle');
     const navLinks = document.getElementById('navLinks');
     const navOverlay = document.getElementById('navOverlay');
+    let lastScrollY = window.scrollY;
+
+    // Animate and hide/show nav on scroll
+    function handleNavScroll() {
+        if (!navBar) return;
+
+        const shouldStick = window.scrollY > 10;
+        const scrollingDown = window.scrollY > lastScrollY && window.scrollY > 120;
+
+        navBar.classList.toggle('scrolled', shouldStick);
+        navBar.classList.toggle('is-hidden', scrollingDown);
+
+        lastScrollY = window.scrollY;
+    }
+
+    window.addEventListener('scroll', handleNavScroll, {
+        passive: true
+    });
+    handleNavScroll();
 
     // Add event listeners
     menuToggle.addEventListener('click', toggleMenu);
@@ -83,7 +103,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const wrapper = document.getElementById('carouselWrapper');
     const cards = document.querySelectorAll('.key-service-card, .our-story-card');
     const totalCards = cards.length;
-    const dotsContainer = document.getElementById('carouselDots');
+    // const dotsContainer = document.getElementById('carouselDots');
     const prevBtn = document.getElementById('prevBtn');
     const nextBtn = document.getElementById('nextBtn');
 
@@ -100,17 +120,17 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     // Create dots based on total pages
-    function createDots() {
-        dotsContainer.innerHTML = '';
-        const totalPages = getTotalPages();
-        for (let i = 0; i < totalPages; i++) {
-            const dot = document.createElement('div');
-            dot.className = 'dot';
-            if (i === 0) dot.classList.add('active');
-            dot.onclick = () => goToSlide(i);
-            dotsContainer.appendChild(dot);
-        }
-    }
+    // function createDots() {
+    //     dotsContainer.innerHTML = '';
+    //     const totalPages = getTotalPages();
+    //     for (let i = 0; i < totalPages; i++) {
+    //         const dot = document.createElement('div');
+    //         dot.className = 'dot';
+    //         if (i === 0) dot.classList.add('active');
+    //         dot.onclick = () => goToSlide(i);
+    //         dotsContainer.appendChild(dot);
+    //     }
+    // }
 
     // Update dots
     function updateDots() {
@@ -173,8 +193,24 @@ document.addEventListener('DOMContentLoaded', function() {
         const totalPages = getTotalPages();
         const currentPage = Math.floor(currentIndex / cardsPerView);
 
-        prevBtn.disabled = totalPages <= 1 || currentPage === 0;
-        nextBtn.disabled = totalPages <= 1 || currentPage === totalPages - 1;
+        // Always disable both if only one page
+        if (totalPages <= 1) {
+            prevBtn.disabled = true;
+            nextBtn.disabled = true;
+            return;
+        }
+
+        // Prev is disabled only on the very first page
+        prevBtn.disabled = currentPage === 0;
+
+        if (totalPages === 2) {
+            // For 2 pages, keep normal behavior: disable only on the last page
+            nextBtn.disabled = currentPage === totalPages - 1;
+        } else {
+            // For 3+ pages, disable "Next" on the second-to-last page
+            // Example: totalPages = 5 → disable when currentPage = 3 (the 4th page)
+            nextBtn.disabled = currentPage >= totalPages - 2;
+        }
     }
 
     // Auto-play functionality
@@ -248,7 +284,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 currentIndex = currentPage * newCardsPerView;
             }
 
-            createDots();
+            // createDots();
             updateCarousel();
         }, 250);
     });
@@ -322,7 +358,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
         // Set initial card widths based on cards per view
         updateCardWidths();
-        createDots();
+        // createDots();
         updateButtons();
         updateCarousel();
 
@@ -488,7 +524,7 @@ document.addEventListener("DOMContentLoaded", () => {
     function toggleKeyServicesView() {
         const staticSection = document.getElementById('keyServicesStatic');
         const carousel = document.getElementById('keyServicesCarousel');
-        const dots = document.getElementById('carouselDots');
+        // const dots = document.getElementById('carouselDots');
 
         if (window.innerWidth < 1200) {
             // Show include section
@@ -496,14 +532,14 @@ document.addEventListener("DOMContentLoaded", () => {
 
             // Hide carousel
             carousel.style.display = 'none';
-            dots.style.display = 'none';
+            // dots.style.display = 'none';
         } else {
             // Hide include section
             staticSection.style.display = 'none';
 
             // Show carousel
             carousel.style.display = 'block';
-            dots.style.display = 'flex';
+            // dots.style.display = 'flex';
         }
     }
 

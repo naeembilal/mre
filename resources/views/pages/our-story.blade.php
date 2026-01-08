@@ -162,7 +162,11 @@
                     <h2 class="main-heading">The MRE Advantage</h2>
                 </div>
 
-                <div class="carousel-container">
+                <div id="keyServicesStatic">
+                    @include('pages.our_story_key_services_section')
+                </div>
+
+                <div id="keyServicesCarousel" class="carousel-container">
                     <!-- Carousel Navigation Arrows -->
                     <div class="carousel-nav-arrows">
                         <button id="prevBtn" class="carousel-nav-btn" aria-label="Previous slide">

@@ -30,7 +30,7 @@
             </div>
             <div class="stat-item">
                 <div class="stat-number">04</div>
-                <div class="stat-label">Regional Coverage</div>
+                <div class="stat-label">Countries Coverage</div>
             </div>
         </div>
     </section>
@@ -278,7 +278,7 @@
                     </div>
                 </div>
 
-                <div id="carouselDots" class="carousel-dots"></div>
+                <!-- <div id="carouselDots" class="carousel-dots"></div> -->
             </div>
         </div>
     </section>

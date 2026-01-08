@@ -45,46 +45,6 @@
     margin: 6px auto 0;
 }
 
-/* MODAL */
-.service-modal {
-    padding: 1.5rem;
-    position: fixed;
-    inset: 0;
-    display: none;
-    z-index: 999;
-}
-
-.service-modal.active {
-    display: block;
-    /* display: flex; */
-    /* align-items: center; */
-    /* justify-content: center; */
-}
-
-.modal-overlay {
-    position: absolute;
-    inset: 0;
-    background: rgba(0, 0, 0, 0.5);
-}
-
-.modal-box {
-    /* position: absolute; */
-    position: fixed;
-    background: #f6f3ef;
-    width: 90%;
-    max-width: 420px;
-    padding: 30px;
-    border-radius: 12px;
-    z-index: 2;
-    text-align: center;
-    margin: 0;
-    /* margin: 10vh auto; */
-}
-
-.modal-footer {
-    margin-top: 20px;
-}
-
 .home-consultation-btn {
     background: var(--secondary-green);
     border-radius: 10px;
@@ -97,21 +57,67 @@
 }
 
 .home-consultation-btn-container {
-    display: block;
-    position: absolute;
-    bottom: 5rem;
+    display: none;
+    margin-top: 1rem;
 }
 
-/* .modal-close {
-    position: absolute;
-    right: 15px;
-    top: 10px;
+/* SweetAlert2 Customization */
+.swal2-popup.service-modal-swal {
+    background: #f6f3ef;
+    border-radius: 12px;
+    padding: 2rem;
+    max-width: 420px;
+}
+
+.swal2-popup.service-modal-swal .swal2-header {
+    padding: 0;
+    margin-bottom: 1.5rem;
+}
+
+.swal2-popup.service-modal-swal .service-modal-icon {
+    width: 25px;
+    margin-bottom: 0.5rem;
+}
+
+.swal2-popup.service-modal-swal .service-modal-title {
+    font-weight: 450;
+    font-size: 18px;
+    margin: 0;
+    color: #000;
+}
+
+.swal2-popup.service-modal-swal .swal2-html-container {
+    text-align: justify;
+    margin: 0;
+    padding: 0;
+}
+
+.swal2-popup.service-modal-swal .swal2-actions {
+    margin-top: 1.5rem;
+    gap: 0.5rem;
+}
+
+.swal2-popup.service-modal-swal .swal2-confirm.service-consultation-btn {
+    background: var(--secondary-green);
+    border-radius: 10px;
     border: none;
-    background: none;
-    font-size: 24px;
-    cursor: pointer;
-} */
-    
+    color: var(--white);
+    padding: 0.5rem 1rem;
+    font-size: 15px;
+    width: auto;
+    margin: 0;
+}
+
+.swal2-popup.service-modal-swal .swal2-cancel {
+    background: transparent;
+    border: 2px solid var(--secondary-green);
+    border-radius: 10px;
+    color: var(--secondary-green);
+    padding: 0.5rem 3rem;
+    font-size: 14px;
+    width: auto;
+    margin: 0;
+}
 </style>
 
 <div class="home-key-service-card">
@@ -135,7 +141,7 @@
         </div>
     </div>
 
-    <button class="learn-more-btn" type="button">
+    <button class="learn-more-btn" type="button" onclick="showServiceModal(this)">
         Learn More
     </button>
 </div>
@@ -162,11 +168,10 @@
         </div>
     </div>
 
-    <button class="learn-more-btn" type="button">
+    <button class="learn-more-btn" type="button" onclick="showServiceModal(this)">
         Learn More
     </button>
 </div>
-
 
 <div class="home-key-service-card">
     <div class="card-icon">
@@ -190,7 +195,7 @@
         </div>
     </div>
 
-    <button class="learn-more-btn" type="button">
+    <button class="learn-more-btn" type="button" onclick="showServiceModal(this)">
         Learn More
     </button>
 </div>
@@ -215,7 +220,7 @@
             successfully execute complex technology roadmaps on time and within scope.
         </div>
     </div>
-    <button class="learn-more-btn" type="button">
+    <button class="learn-more-btn" type="button" onclick="showServiceModal(this)">
         Learn More
     </button>
 </div>
@@ -240,98 +245,58 @@
             ensuring optimized IT operations and the agility to scale your business.
         </div>
     </div>
-    <button class="learn-more-btn" type="button">
+    <button class="learn-more-btn" type="button" onclick="showServiceModal(this)">
         Learn More
     </button>
 </div>
 
-<!-- Modal -->
-<div class="service-modal" id="serviceModal">
-    <div class="modal-overlay"></div>
-
-    <div class="modal-box">
-        <!-- <button class="modal-close modal-close-btn">&times;</button> -->
-        <div class="modal-content"></div>
-
-        <div class="modal-footer" style="text-align: center; padding-top: 3rem;">
-            <button class="modal-close learn-more-btn">Close</button>
-        </div>
-    </div>
-</div>
 
 <script>
-document.querySelectorAll('.learn-more-btn').forEach(btn => {
-    btn.addEventListener('click', function () {
-        // Prevent close button triggering open
-        if (this.classList.contains('modal-close')) return;
+function showServiceModal(button) {
+    const card = button.closest('.home-key-service-card');
+    const icon = card.querySelector('.card-icon img').src;
+    const title = card.querySelector('.card-content h3').innerHTML;
+    const text = card.querySelector('.hover-text').innerHTML;
+    const contactUrl = '{{ route('contact') }}';
 
-        const card = this.closest('.home-key-service-card');
-        const modal = document.getElementById('serviceModal');
-        const modalBox = modal.querySelector('.modal-box');
-
-        const icon = card.querySelector('.card-icon').querySelector('img').getAttribute('src');
-        const title = card.querySelector('.card-content h3').innerHTML;
-        const text = card.querySelector('.hover-text').innerHTML;
-
-        // console.log(icon, title, text);
-
-        modal.querySelector('.modal-content').innerHTML = `
-            <div class="modal-header" style="text-align: center; padding-bottom: 2rem;">
-                <img src="${icon}" alt="${title}" style="width: 25px;">
-                <p style="font-weight: 450; font-size: 18px;">${title}</p>
+    Swal.fire({
+        customClass: {
+            popup: 'service-modal-swal',
+            confirmButton: 'service-consultation-btn',
+            cancelButton: 'swal2-cancel'
+        },
+        html: `
+            <div style="text-align: center; padding-bottom: 2rem;">
+                <img src="${icon}" alt="${title}" class="service-modal-icon">
+                <p class="service-modal-title">${title}</p>
             </div>
-            <div class="modal-body" style="text-align: justify;">
+            <div style="text-align: justify;">
                 ${text}
             </div>
-              <div class="home-consultation-btn-container">
-                <button type="button" class="home-consultation-btn"
-                    onclick="window.location.href='{{route('contact')}}'">
-                    Request A Consultation</button>
+            <div class="home-consultation-btn-container">
+                <button type="button" class="home-consultation-btn consultation-link-btn">
+                    Request A Consultation
+                </button>
             </div>
-        `;
-
-        modalBox.style.visibility = 'hidden';
-        modal.classList.add('active');
-        // document.getElementById('serviceModal').classList.add('active');
-
-        
-        // 🔹 WAIT FOR RENDER (IMPORTANT)
-        requestAnimationFrame(() => {
-            const cardRect = card.getBoundingClientRect();
-            const modalRect = modalBox.getBoundingClientRect();
-
-            let top = cardRect.top - modalRect.height - 12;
-            let left = cardRect.left + (cardRect.width / 2) - (modalRect.width / 2);
-
-            // Open below if no space above
-            if (top < 10) {
-                top = cardRect.bottom + 12;
+        `,
+        showCancelButton: true,
+        cancelButtonText: 'Close',
+        confirmButtonText: '',
+        confirmButtonColor: 'transparent',
+        cancelButtonColor: 'transparent',
+        buttonsStyling: false,
+        allowOutsideClick: true,
+        allowEscapeKey: true,
+        showConfirmButton: false,
+        didOpen: () => {
+            const consultationBtn = document.querySelector('.consultation-link-btn');
+            if (consultationBtn) {
+                consultationBtn.addEventListener('click', function() {
+                    window.location.href = contactUrl;
+                });
             }
-
-            // Clamp horizontally
-            left = Math.max(10, Math.min(left, window.innerWidth - modalRect.width - 10));
-
-            modalBox.style.top = `${top}px`;
-            modalBox.style.left = `${left}px`;
-            modalBox.style.visibility = 'visible';
-        });
-
+        }
     });
-});
-
-// Close modal (button + overlay)
-document.addEventListener('click', function (e) {
-    if (e.target.classList.contains('modal-close') ||
-        e.target.classList.contains('modal-overlay')) {
-        closeModal();
-    }
-});
-
-// document.querySelector('.modal-close').addEventListener('click', closeModal);
-// document.querySelector('.modal-overlay').addEventListener('click', closeModal);
-
-function closeModal() {
-    document.getElementById('serviceModal').classList.remove('active');
 }
 </script>
 
