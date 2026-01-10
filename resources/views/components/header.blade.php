@@ -14,7 +14,7 @@
     }
 
     nav.scrolled {
-        position: fixed;
+        position: sticky;
         top: 0;
         left: 0;
         width: 100%;
@@ -46,14 +46,28 @@
     .nav-links{
         margin-right: 3rem;
     }
+
     @media (max-width: 968px) {
+        nav {
+            justify-content: flex-start;
+            position: relative;
+            height: 90px;
+            will-change: unset;
+            transform: unset;
+            transition: unset;
+        }
+
+        nav.scrolled {
+            position: fixed;
+        }
+        .file-upload-text{
+            text-align: -webkit-center;
+            padding-bottom: 1rem;
+        }
         .certification-badge {
             margin-top: 0rem;
         }
         .certification-badge img {
-            height: 90px;
-        }
-        nav{
             height: 90px;
         }
         .nav-links{

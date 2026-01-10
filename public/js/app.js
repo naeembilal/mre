@@ -1,4 +1,7 @@
 document.addEventListener('DOMContentLoaded', function() {
+    window.addEventListener("scroll", () => {
+        console.log(window.scrollY);
+    });
     const serviceCards = document.querySelectorAll('.key-service-card');
 
     serviceCards.forEach(card => {
@@ -26,22 +29,23 @@ document.addEventListener('DOMContentLoaded', function() {
     let lastScrollY = window.scrollY;
 
     // Animate and hide/show nav on scroll
-    function handleNavScroll() {
-        if (!navBar) return;
+    // function handleNavScroll() {
+    //     if (!navBar) return;
 
-        const shouldStick = window.scrollY > 10;
-        const scrollingDown = window.scrollY > lastScrollY && window.scrollY > 120;
+    //     const shouldStick = window.scrollY > 10;
+    //     const scrollingDown = window.scrollY > lastScrollY && window.scrollY > 120;
 
-        navBar.classList.toggle('scrolled', shouldStick);
-        navBar.classList.toggle('is-hidden', scrollingDown);
+    //     navBar.classList.toggle('scrolled', shouldStick);
+    //     navBar.classList.toggle('is-hidden', true);
 
-        lastScrollY = window.scrollY;
-    }
+    //     lastScrollY = window.scrollY;
+    // }
 
-    window.addEventListener('scroll', handleNavScroll, {
-        passive: true
-    });
-    handleNavScroll();
+    // window.addEventListener('scroll', handleNavScroll, {
+    //     passive: true
+    // });
+    // handleNavScroll();
+
 
     // Add event listeners
     menuToggle.addEventListener('click', toggleMenu);
@@ -65,7 +69,7 @@ document.addEventListener('DOMContentLoaded', function() {
             navOverlay.classList.remove('active');
 
             // Reset body overflow
-            document.body.style.overflow = '';
+            // document.body.style.overflow = '';
 
             // Update aria-expanded attribute
             menuToggle.setAttribute('aria-expanded', 'false');
@@ -192,6 +196,7 @@ document.addEventListener('DOMContentLoaded', function() {
         const cardsPerView = getCardsPerView();
         const totalPages = getTotalPages();
         const currentPage = Math.floor(currentIndex / cardsPerView);
+        const screenWidth = window.innerWidth;
 
         // Always disable both if only one page
         if (totalPages <= 1) {
@@ -203,11 +208,11 @@ document.addEventListener('DOMContentLoaded', function() {
         // Prev is disabled only on the very first page
         prevBtn.disabled = currentPage === 0;
 
-        if (totalPages === 2) {
-            // For 2 pages, keep normal behavior: disable only on the last page
+        if (screenWidth < 1600) {
+            // For screens < 1600px: show all cards (disable on last page)
             nextBtn.disabled = currentPage === totalPages - 1;
         } else {
-            // For 3+ pages, disable "Next" on the second-to-last page
+            // For screens >= 1600px: show all cards minus one (disable on second-to-last page)
             // Example: totalPages = 5 → disable when currentPage = 3 (the 4th page)
             nextBtn.disabled = currentPage >= totalPages - 2;
         }

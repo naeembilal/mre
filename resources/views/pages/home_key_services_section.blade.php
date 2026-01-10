@@ -67,6 +67,39 @@
     border-radius: 12px;
     padding: 2rem;
     max-width: 420px;
+    /* animation: swal2-show-subtle 0.15s ease-out !important; */
+}
+
+.slow-animation-show {
+  animation: swal2-show 0.7s; 
+}
+
+.slow-animation-hide {
+  animation: swal2-hide 0.25s; 
+}
+
+@keyframes swal2-show-subtle {
+    0% {
+        transform: scale(0.98);
+        opacity: 0;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+.swal2-backdrop-show {
+    animation: swal2-backdrop-show-subtle 0.15s ease-out !important;
+}
+
+@keyframes swal2-backdrop-show-subtle {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
 }
 
 .swal2-popup.service-modal-swal .swal2-header {
@@ -288,6 +321,8 @@ function showServiceModal(button) {
         allowOutsideClick: true,
         allowEscapeKey: true,
         showConfirmButton: false,
+        // animation: true,
+        // timerProgressBar: false,
         didOpen: () => {
             const consultationBtn = document.querySelector('.consultation-link-btn');
             if (consultationBtn) {
@@ -295,6 +330,12 @@ function showServiceModal(button) {
                     window.location.href = contactUrl;
                 });
             }
+        },
+        showClass: {
+            popup: 'slow-animation-show'
+        },
+        hideClass: {
+            popup: 'slow-animation-hide'
         }
     });
 }

@@ -288,8 +288,11 @@
 
 <script>
     window.addEventListener("scroll", function () {
+        // console.log(window.scrollY);
         const nav = document.querySelector("nav");
-        nav.classList.toggle("scrolled", window.scrollY > 50);
+        nav.classList.toggle("scrolled", window.scrollY > 0);
+    }, {
+        passive: true
     });
 
     const counters = document.querySelectorAll(".stat-number");
