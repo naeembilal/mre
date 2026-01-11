@@ -197,6 +197,7 @@ document.addEventListener('DOMContentLoaded', function() {
         const totalPages = getTotalPages();
         const currentPage = Math.floor(currentIndex / cardsPerView);
         const screenWidth = window.innerWidth;
+        const isOurStoryPage = document.querySelector('.our-story-key-services') !== null;
 
         // Always disable both if only one page
         if (totalPages <= 1) {
@@ -208,13 +209,18 @@ document.addEventListener('DOMContentLoaded', function() {
         // Prev is disabled only on the very first page
         prevBtn.disabled = currentPage === 0;
 
-        if (screenWidth < 1600) {
-            // For screens < 1600px: show all cards (disable on last page)
-            nextBtn.disabled = currentPage === totalPages - 1;
+        if (isOurStoryPage) {
+            // For our-story page: check 1600px breakpoint
+            if (screenWidth < 1600) {
+                // For screens < 1600px: show all cards (disable on last page)
+                nextBtn.disabled = currentPage === totalPages - 1;
+            } else {
+                // For screens >= 1600px: show all cards minus one (disable on second-to-last page)
+                nextBtn.disabled = currentPage >= totalPages - 2;
+            }
         } else {
-            // For screens >= 1600px: show all cards minus one (disable on second-to-last page)
-            // Example: totalPages = 5 → disable when currentPage = 3 (the 4th page)
-            nextBtn.disabled = currentPage >= totalPages - 2;
+            // For home page: always show all cards (disable on last page) - no 1600px check
+            nextBtn.disabled = currentPage === totalPages - 1;
         }
     }
 

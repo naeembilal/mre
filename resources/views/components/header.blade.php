@@ -48,13 +48,25 @@
     }
 
     @media (max-width: 968px) {
+        .hero{
+            margin-top: 5rem;
+        }
         nav {
             justify-content: flex-start;
-            position: relative;
+            /* position: relative; */
+            position: fixed;
             height: 90px;
-            will-change: unset;
             transform: unset;
             transition: unset;
+            will-change: unset;
+
+            /* box-shadow: none;
+            transform: translateY(0);
+            transition:
+            background-color 0.3s ease,
+            box-shadow 0.3s ease,
+            transform 0.3s ease;
+            will-change: transform; */
         }
 
         nav.scrolled {
