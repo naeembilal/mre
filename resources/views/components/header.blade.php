@@ -48,8 +48,11 @@
     }
 
     @media (max-width: 968px) {
-        .hero{
+        .hero, .story-hero-wrapper{
             margin-top: 5rem;
+        }
+        .testimonials-grid-container.home .bordered-testimonial-box{
+            font-size: 25px;
         }
         nav {
             justify-content: flex-start;

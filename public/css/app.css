@@ -142,7 +142,8 @@ nav {
     display: grid;
     grid-template-columns: 1fr 300px;
     gap: 4rem;
-    padding: 4rem 5%;
+    padding: 4rem 35%;
+    /* padding: 4rem 5%; */
     align-items: center;
     background-image: url('/images/home_hero.png');
     background-size: cover;
@@ -151,8 +152,11 @@ nav {
 }
 
 .hero-content {
-    max-width: 750px;
-    margin-left: 2rem;
+    max-width: 1600px;
+    margin: 0 auto 0 0%;
+    /* margin-left: 2rem; */
+    /* max-width: 750px;
+    */
 }
 
 .hero-title {
@@ -1166,7 +1170,10 @@ nav {
 }
 
 .story-content-wrapper {
-    max-width: 881px;
+    /* max-width: 881px; */
+    position: relative;
+    max-width: 1600px;
+    margin: 0 auto;
 }
 
 .story-tagline {
@@ -1400,6 +1407,10 @@ nav {
     width: 84%;
     display: block;
     margin: 0 auto;
+
+    position: relative;
+    max-width: 1600px;
+    margin: 0 auto;
 }
 
 .career-hr-team {
@@ -1607,7 +1618,7 @@ nav {
     margin: 0 auto;
     position: relative;
     min-height: 800px;
-    padding-top: 60px;
+    /* padding-top: 60px; */
 }
 
 .polaroid-cluster-group {
@@ -1754,6 +1765,7 @@ nav {
 .growth-content {
     position: sticky;
     top: 120px;
+    margin-left: 4rem;
 }
 
 .growth-title {
@@ -1902,6 +1914,7 @@ nav {
 /* Left Side - Contact Info */
 .contact-info-panel {
     padding: 2rem 0;
+    margin-left: 2rem;
 }
 
 .contact-info-text {
@@ -2441,10 +2454,32 @@ nav {
     height: 90%;
 }
 
+@media screen and (min-width: 2001px) and (max-width: 4000px) {
+    .hero-content {
+        position: relative;
+        max-width: 1600px;
+        margin: 0 auto 0 0;
+    }
+
+    .hero {
+        padding: 4rem 15%;
+    }
+}
+
 /* Media Queries */
 @media screen and (max-width: 2000px) {
+    .hero-content {
+        position: relative;
+        max-width: 1600px;
+        margin: 0 auto 0 2%;
+    }
+
+    .hero {
+        padding: 4rem 5%;
+    }
+
     .polaroid-photo-card {
-        width: 220px;
+        width: 240px;
         padding: 8px 5px 15px 5px;
     }
 
@@ -2455,9 +2490,17 @@ nav {
     .your-story-svg {
         height: 70%;
     }
+
+    .polaroid-image-wrapper {
+        height: 250px;
+    }
 }
 
 @media screen and (max-width: 1600px) {
+    .hero-content {
+        max-width: 750px;
+        margin-left: 2rem;
+    }
 
     .your-story-svg {
         height: 70%;
@@ -2506,6 +2549,10 @@ nav {
 
     .polaroid-gallery-container {
         max-width: 1728px;
+    }
+
+    .polaroid-image-wrapper {
+        height: 220px;
     }
 
     /* .consultation-btn-container {
@@ -2579,6 +2626,10 @@ nav {
 
     .growth-title {
         font-size: 80px;
+    }
+
+    .polaroid-image-wrapper {
+        height: 220px;
     }
 
     /* .consultation-btn-container {
@@ -3110,7 +3161,7 @@ nav {
         position: fixed;
         top: 0;
         right: -100%;
-        width: 80%;
+        width: 60%;
         max-width: 400px;
         height: 100vh;
         background-color: var(--bg-cream);
@@ -3122,6 +3173,7 @@ nav {
         transition: right 0.4s cubic-bezier(0.65, 0, 0.35, 1);
         box-shadow: -5px 0 25px rgba(0, 0, 0, 0.1);
         z-index: 99;
+        opacity: 0.95;
     }
 
     .nav-links.active {
@@ -4275,4 +4327,7 @@ nav {
     font-size: 20px;
     cursor: pointer;
     position: relative;
+}
+
+position: relative;
 }

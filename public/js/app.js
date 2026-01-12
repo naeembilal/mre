@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', function() {
     window.addEventListener("scroll", () => {
-        console.log(window.scrollY);
+        // console.log(window.scrollY);
     });
     const serviceCards = document.querySelectorAll('.key-service-card');
 

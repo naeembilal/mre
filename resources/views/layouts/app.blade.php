@@ -125,7 +125,7 @@
                     if (response.success === true) {
                         Swal.fire({
                             title: '',
-                            text: 'Send Successfully',
+                            text: 'Sent Successfully',
                             icon: 'success',
                             customClass: {
                                 confirmButton: 'btn btn-primary'
@@ -236,7 +236,7 @@
                     if (response.success === true) {
                         Swal.fire({
                             title: '',
-                            text: 'Send Successfully',
+                            text: 'Sent Successfully',
                             icon: 'success',
                             customClass: {
                                 confirmButton: 'btn btn-primary'

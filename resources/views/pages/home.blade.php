@@ -2,37 +2,39 @@
 @section('title', 'Home')
 @section('content')
     <section class="hero fade-in-section">
-        <div class="hero-content">
-            <h1 class="hero-title">
-                Transform<br>The Habit
-            </h1>
+        <!-- <div style="position:relative; max-width:1600px; margin:0 auto;"> -->
+            <div class="hero-content">
+                <h1 class="hero-title">
+                    Transform<br>The Habit
+                </h1>
 
-            <p class="hero-description">
-                At MRE, we turn manual work into smart, automated operations that boost
-                efficiency and elevate people management. Our solutions go beyond digitization,
-                creating seamless workflows, empowering teams, and driving sustainable growth
-                aligned with the GCC’s Vision 2030.
-            </p>
-        </div>
+                <p class="hero-description">
+                    At MRE, we turn manual work into smart, automated operations that boost
+                    efficiency and elevate people management. Our solutions go beyond digitization,
+                    creating seamless workflows, empowering teams, and driving sustainable growth
+                    aligned with the GCC’s Vision 2030.
+                </p>
+            </div>
 
-        <div class="stats">
-            <div class="stat-item">
-                <div class="stat-number">90+</div>
-                <div class="stat-label">Clients</div>
+            <div class="stats">
+                <div class="stat-item">
+                    <div class="stat-number">90+</div>
+                    <div class="stat-label">Clients</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">4K+</div>
+                    <div class="stat-label">People Managed</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">27+</div>
+                    <div class="stat-label">Experts Nationalities</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">04</div>
+                    <div class="stat-label">Countries Coverage</div>
+                </div>
             </div>
-            <div class="stat-item">
-                <div class="stat-number">4K+</div>
-                <div class="stat-label">People Managed</div>
-            </div>
-            <div class="stat-item">
-                <div class="stat-number">27+</div>
-                <div class="stat-label">Experts Nationalities</div>
-            </div>
-            <div class="stat-item">
-                <div class="stat-number">04</div>
-                <div class="stat-label">Countries Coverage</div>
-            </div>
-        </div>
+        <!-- </div> -->
     </section>
 
     <section class="services-section fade-in-section">

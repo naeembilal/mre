@@ -45,7 +45,7 @@
                         <input
                             type="text"
                             name="contactName"
-                            class="contact-form-input"
+                            class="form-input"
                             placeholder="Name"
                             required
                         >
@@ -55,7 +55,7 @@
                         <input
                             type="text"
                             name="contactSubject"
-                            class="contact-form-input"
+                            class="form-input"
                             placeholder="Subject"
                             required
                         >
@@ -64,7 +64,7 @@
                     <div class="contact-form-group">
                         <textarea
                             name="contactMessage"
-                            class="contact-form-textarea"
+                            class="form-input"
                             placeholder="Type Your Message Here"
                             required
                         ></textarea>

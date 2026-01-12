@@ -28,9 +28,10 @@
                 </clipPath>
             </defs>
         </svg>
+
+        <div style="position:relative; max-width:1600px; margin:0 auto;">
         <!-- Company Background -->
         <div class="info-card-wrapper">
-{{--            <b>Company Background:</b>--}}
             <div class="bordered-info-box main-info-box">
                 <p class="company-text-content">
                     MRE is the GCC's premier operational consultancy, specializing in tech-powered
@@ -40,42 +41,43 @@
             </div>
         </div>
 
-        <!-- Our Mission -->
-        <div class="mission-card-wrapper">
-            <div class="sub-info-box">
-                <h3 class="">Our Mission</h3>
+            <!-- Our Mission -->
+            <div class="mission-card-wrapper">
+                <div class="sub-info-box">
+                    <h3 class="">Our Mission</h3>
+                </div>
+                <div class="bordered-info-box">
+                    <p class="company-text-content">
+                        To empower organizations with people-first AI and deep operational expertise to amplify
+                        productivity and unlock the full potential of their talent.
+                    </p>
+                </div>
             </div>
-            <div class="bordered-info-box">
-                <p class="company-text-content">
-                    To empower organizations with people-first AI and deep operational expertise to amplify
-                    productivity and unlock the full potential of their talent.
-                </p>
-            </div>
-        </div>
 
-        <!-- Our Vision -->
-        <div class="vision-card-wrapper">
-            <div class="sub-info-box">
-                <h3 class="">Our Vision</h3>
+            <!-- Our Vision -->
+            <div class="vision-card-wrapper">
+                <div class="sub-info-box">
+                    <h3 class="">Our Vision</h3>
+                </div>
+                <div class="bordered-info-box">
+                    <p class="company-text-content">
+                        We envision a future where businesses thrive through smart, secure, and fully automated
+                        solutions driven by a team as diverse as our global reach.
+                    </p>
+                </div>
             </div>
-            <div class="bordered-info-box">
-                <p class="company-text-content">
-                    We envision a future where businesses thrive through smart, secure, and fully automated
-                    solutions driven by a team as diverse as our global reach.
-                </p>
-            </div>
-        </div>
 
-        <!-- Our Values -->
-        <div class="values-card-wrapper">
-            <div class="sub-info-box">
-                <h3 class="">Core Values</h3>
-            </div>
-            <div class="bordered-info-box">
-                <p class="company-text-content">
-                    We are defined by Innovation and Operational Integrity, rooted in our Regional Expertise,
-                    and driven by Empowering Talent through a Results-Driven Partnership.
-                </p>
+            <!-- Our Values -->
+            <div class="values-card-wrapper">
+                <div class="sub-info-box">
+                    <h3 class="">Core Values</h3>
+                </div>
+                <div class="bordered-info-box">
+                    <p class="company-text-content">
+                        We are defined by Innovation and Operational Integrity, rooted in our Regional Expertise,
+                        and driven by Empowering Talent through a Results-Driven Partnership.
+                    </p>
+                </div>
             </div>
         </div>
     </section>
