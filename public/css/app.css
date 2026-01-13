@@ -2543,8 +2543,8 @@ nav {
     }
 
     .polaroid-photo-card {
-        width: 180px;
-        padding: 1px 5px 15px 5px;
+        width: 220px;
+        padding: 10px 5px 0px 5px;
     }
 
     .polaroid-gallery-container {
@@ -2552,7 +2552,7 @@ nav {
     }
 
     .polaroid-image-wrapper {
-        height: 220px;
+        height: 260px;
     }
 
     /* .consultation-btn-container {
@@ -2616,8 +2616,8 @@ nav {
     }
 
     .polaroid-photo-card {
-        width: 180px;
-        padding: 1px 5px 15px 5px;
+        width: 220px;
+        padding: 10px 5px 0px 5px;
     }
 
     .polaroid-gallery-container {
@@ -2629,7 +2629,7 @@ nav {
     }
 
     .polaroid-image-wrapper {
-        height: 220px;
+        height: 270px;
     }
 
     /* .consultation-btn-container {
@@ -2678,6 +2678,7 @@ nav {
     .sub-info-box h3 {
         left: 0rem;
         padding-bottom: 1rem;
+        padding-top: 2rem;
     }
 
     .info-card-wrapper,
@@ -2853,6 +2854,7 @@ nav {
     .sub-info-box h3 {
         left: 0rem;
         padding-bottom: 1rem;
+        padding-top: 2rem;
     }
 
     .info-card-wrapper,
@@ -3286,6 +3288,7 @@ nav {
     .sub-info-box h3 {
         left: 0rem;
         padding-bottom: 1rem;
+        padding-top: 2rem;
     }
 
     .services-title {
@@ -3378,6 +3381,7 @@ nav {
     .sub-info-box h3 {
         left: 0rem;
         padding-bottom: 1rem;
+        padding-top: 2rem;
     }
 
     .key-service-card,
@@ -3677,6 +3681,7 @@ nav {
     .sub-info-box h3 {
         left: 0rem;
         padding-bottom: 1rem;
+        padding-top: 2rem;
     }
 
     .key-service-card,
@@ -3870,6 +3875,7 @@ nav {
     .sub-info-box h3 {
         left: 0rem;
         padding-bottom: 1rem;
+        padding-top: 2rem;
     }
 
     .key-service-card,
@@ -4153,6 +4159,7 @@ nav {
     .sub-info-box h3 {
         left: 0rem;
         padding-bottom: 1rem;
+        padding-top: 2rem;
     }
 
     .key-service-card,

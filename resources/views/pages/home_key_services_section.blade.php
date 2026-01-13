@@ -151,6 +151,10 @@
     width: auto;
     margin: 0;
 }
+
+.swal2-popup.service-modal-swal{
+    max-width: 320px;
+}
 </style>
 
 <div class="home-key-service-card">
