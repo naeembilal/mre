@@ -19,9 +19,9 @@
             <!-- Left Side - Contact Information -->
             <div class="contact-info-panel animate-slide-left">
                 <div class="contact-info-text">
-                    <span class="contact-phone-line">Bahrain:&nbsp; <a class="contact-email"href="tel:+97377996666">+973 77996666</a></span>
+                    <span class="contact-phone-line">Bahrain:&nbsp; <a class="contact-phone" href="tel:+97377996666">+973 77996666</a></span>
 
-                    <span class="contact-phone-line">Dubai:&nbsp; <a class="contact-email" href="tel:+97377996666">+973 77996666</a></span>
+                    <span class="contact-phone-line">Dubai:&nbsp; <a class="contact-phone" href="tel:+97377996666">+973 77996666</a></span>
 
                     <a href="mailto:contact@mre.co" class="contact-email">contact@mre.co</a>
 

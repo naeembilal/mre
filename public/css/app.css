@@ -1941,13 +1941,15 @@ nav {
     -webkit-tap-highlight-color: transparent;
 }
 
-.contact-email {
+.contact-email,
+.contact-phone {
     color: var(--bg-cream);
     text-decoration: none;
     transition: opacity 0.3s;
 }
 
-.contact-email:hover {
+.contact-email:hover,
+.contact-phone:hover {
     opacity: 0.7;
 }
 
