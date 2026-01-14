@@ -23,14 +23,18 @@ class MailController extends Controller
         Message: {$request->message}
     ";
 
-        Mail::raw($data, function ($mail) use ($request) {
-            $mail->to('contact@mre.co')
-                ->subject($request->subject)
-                ->replyTo($request->email ?? 'no-reply@mre.co')
-                ->from('contact@mre.co', 'MRE');
-        });
+        try {
+            Mail::raw($data, function ($mail) use ($request) {
+                $mail->to('contact@mre.co')
+                    ->subject($request->subject)
+                    ->replyTo($request->email ?? 'no-reply@mre.co');
+            });
 
-        return response()->json(['success' => true, 'msg' => 'Message sent successfully'], 200);
+            return response()->json(['success' => true, 'msg' => 'Message sent successfully'], 200);
+        } catch (\Exception $e) {
+            \Log::error('Contact email failed: ' . $e->getMessage());
+            return response()->json(['success' => false, 'msg' => 'Failed to send message'], 500);
+        }
     }
 
     public function sendCareer(Request $request)
@@ -53,17 +57,21 @@ class MailController extends Controller
         Message: {$request->careerMessage}
     ";
 
-        Mail::raw($data, function ($mail) use ($request, $fullPath, $fileName) {
-            $mail->to('contact@mre.co')
-                ->subject("Career Application - {$request->careerDepartment}")
-                ->replyTo($request->email ?? 'no-reply@mre.co')
-                ->from('contact@mre.co', 'MRE')
-                ->attach($fullPath, [
-                    'as' => $fileName,
-                    'mime' => $request->file('careerCV')->getMimeType()
-                ]);
-        });
+        try {
+            Mail::raw($data, function ($mail) use ($request, $fullPath, $fileName) {
+                $mail->to('contact@mre.co')
+                    ->subject("Career Application - {$request->careerDepartment}")
+                    ->replyTo($request->careerEmail ?? 'no-reply@mre.co')
+                    ->attach($fullPath, [
+                        'as' => $fileName,
+                        'mime' => $request->file('careerCV')->getMimeType()
+                    ]);
+            });
 
-        return response()->json(['success' => true, 'status' => 'Message sent successfully'], 200);
+            return response()->json(['success' => true, 'status' => 'Message sent successfully'], 200);
+        } catch (\Exception $e) {
+            \Log::error('Career email failed: ' . $e->getMessage());
+            return response()->json(['success' => false, 'status' => 'Failed to send message'], 500);
+        }
     }
 }
