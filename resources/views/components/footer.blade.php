@@ -35,9 +35,9 @@
             <div class="mre-cta-column">
                 <h2 class="mre-cta-heading">Contact Us</h2>
                 <div class="mre-cta-content mre-contact-info">
-                    <p>Bahrain : +973 77996666</p>
-                    <p>Dubai: +973 77996666</p>
-                    <p>contact@mre.co</p>
+                    <p>Bahrain : <a href="tel:+97377996666">+973 77996666</a></p>
+                    <p>Dubai: <a href="tel:+97377996666">+973 77996666</a></p>
+                    <p><a href="mailto:contact@mre.co">contact@mre.co</a></p>
                 </div>
             </div>
         </div>
