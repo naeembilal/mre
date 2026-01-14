@@ -24,7 +24,7 @@ class MailController extends Controller
     ";
 
         Mail::raw($data, function ($mail) use ($request) {
-            $mail->to('abdullahshahid1993@yahoo.com')
+            $mail->to('contact@mre.co')
                 ->subject($request->subject)
                 ->replyTo($request->email ?? 'no-reply@mre.co')
                 ->from('contact@mre.co', 'MRE');
@@ -54,7 +54,7 @@ class MailController extends Controller
     ";
 
         Mail::raw($data, function ($mail) use ($request, $fullPath, $fileName) {
-            $mail->to('abdullahshahid1993@yahoo.com')
+            $mail->to('contact@mre.co')
                 ->subject("Career Application - {$request->careerDepartment}")
                 ->replyTo($request->email ?? 'no-reply@mre.co')
                 ->from('contact@mre.co', 'MRE')
